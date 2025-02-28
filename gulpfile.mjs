@@ -1,13 +1,10 @@
 import { src, dest, watch, series, parallel } from 'gulp';
-import dartSass from 'sass';
+import * as dartSass from 'sass'
 import gulpSass from 'gulp-sass';
 import htmlmin from 'gulp-htmlmin';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import imagemin from 'gulp-imagemin';
-import webp from 'gulp-webp';
-import avif from 'gulp-avif';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
@@ -54,29 +51,15 @@ export function html() {
         .pipe(browserSync.stream());
 }
 
-// Оптимизация изображений
+
 export function images() {
-    return src('src/img/**/*.{jpg,png,svg}')
-        .pipe(imagemin())
+    return src('src/img/**/*')
         .pipe(dest('dist/img'))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream()); 
 }
 
-// Конвертация в WebP
-export function webpImages() {
-    return src('src/img/**/*.{jpg,png}')
-        .pipe(webp())
-        .pipe(dest('dist/img'))
-        .pipe(browserSync.stream());
-}
 
-// Конвертация в AVIF
-export function avifImages() {
-    return src('src/img/**/*.{jpg,png}')
-        .pipe(avif({ quality: 50 }))
-        .pipe(dest('dist/img'))
-        .pipe(browserSync.stream());
-}
+
 
 // Оптимизация JS
 export function scripts() {
@@ -101,12 +84,12 @@ export function serve() {
     watch('src/scss/**/*.scss', styles);
     watch('src/js/**/*.js', scripts);
     watch('src/**/*.html', html);
-    watch('src/img/**/*.{jpg,png,svg}', series(images, webpImages, avifImages));
+    watch('src/img/**/*', images);
     watch('src/fonts/**/*.{woff,woff2,ttf,eot,otf,css}', fonts);
 }
 
 export default series(
-    parallel(styles, images, webpImages, avifImages, scripts, html, fonts, libs),
+    parallel(styles, images, scripts, html, fonts, libs),
     serve
 );
 

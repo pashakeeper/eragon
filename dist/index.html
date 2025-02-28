@@ -4,16 +4,77 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Eragon</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="fonts/font-face.css">
 	<link rel="stylesheet" href="css/libs.css">
 	<link rel="stylesheet" href="css/style.css">
-
-
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 
-	
+	<!-- header -->
+	 <header class="header" id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="logo">
+						<a href="/">
+							<img src="img/logo.svg" alt="Site logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-6 menu_box">
+					<ul class="nav main_menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3">
+					<ul class="nav social_menu">
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-telegram"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					</ul>
+					<div class="custom-select">
+						<div class="custom-select-trigger">
+							<span id="selected-lang">English</span>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="custom-options">
+							<span class="custom-option selected" data-lang="en">ENG</span>
+							<span class="custom-option" data-lang="ua">UA</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 </header>
 
+	 <!-- section 1 -->
+	  <section class="section_01" id="section_01">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<h1><span class="blue">Eragon</span><span class="stroke">- Your</span> <span class="white">Freedom</span> <span class="stroke">to</span> <span class="blue">move</span></h1>
+					<div class="line"><img src="img/line.svg" alt="Line"></div>
+					<p>Power, speed, up to 100 km range, comfort, accessories, and free maintenance – all included in your rental</p>
+					<a href="#" class="btn main_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+				</div>
+				<div class="col-lg-5 bike_box">
+					<img src="img/bike.svg" alt="Bike">
+					<a href="#" class="btn main_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+				</div>
+			</div>
+		</div>
+	  </section>
+
+	
+<script defer="defer" src="js/jquery.min.js"></script>
 <script defer="defer" src="js/main.js"></script>	
 </body>
 </html>
