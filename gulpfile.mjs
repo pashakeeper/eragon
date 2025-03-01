@@ -38,7 +38,9 @@ export function fonts() {
 }
 export function libs() {
     return src([
-        'node_modules/jquery/dist/jquery.min.js' // Копируем jQuery
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
+        'node_modules/aos/dist/aos.js' 
     ])
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream());

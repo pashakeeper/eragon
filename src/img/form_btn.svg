@@ -1,0 +1,27 @@
+<svg width="749.400391" height="110.399902" viewBox="0 0 749.4 110.4" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_7_219_dd" x="0.000000" y="0.000000" width="749.400391" height="110.399902" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="0"/>
+			<feGaussianBlur stdDeviation="3.06667"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0.30588 0 0 0 0 0.78039 0 0 0 0 0.61569 0 0 0 0.4 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+	</defs>
+	<path id="Vector 19" d="M66.95 94.45L59.95 100.45L99.95 100.45L92.95 94.45L66.95 94.45Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 19" d="M66.95 94.45L92.95 94.45L99.95 100.45L59.95 100.45L66.95 94.45Z" stroke="#1FDAFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<path id="Vector 18" d="M53.45 8.94L47.45 14.45L91.45 14.45L96.45 8.94L53.45 8.94Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 18" d="M53.45 8.94L96.45 8.94L91.45 14.45L47.45 14.45L53.45 8.94Z" stroke="#1FDAFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+	<g filter="url(#filter_7_219_dd)">
+		<path id="Vector 16" d="M93.95 18.45L43.95 18.45L10.45 52.95L10.45 88.95L22.95 99.45L55.45 99.45L65.45 90.95L93.95 90.95L104.95 99.95L722.95 99.95L737.95 85.95L737.95 70.44L731.95 64.44L731.95 45.45L738.95 39.45L738.95 27.95L729.45 18.95L702.95 18.95L693.45 10.45L101.45 10.45L93.95 18.45Z" fill="#122528" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector 16" d="M93.95 18.45L101.45 10.45L693.45 10.45L702.95 18.95L729.45 18.95L738.95 27.95L738.95 39.45L731.95 45.45L731.95 64.44L737.95 70.44L737.95 85.95L722.95 99.95L104.95 99.95L93.95 90.95L65.45 90.95L55.45 99.45L22.95 99.45L10.45 88.95L10.45 52.95L43.95 18.45L93.95 18.45Z" stroke="#1FDAFF" stroke-opacity="1.000000" stroke-width="2.500000"/>
+	</g>
+	<path id="Vector 17" d="M735.95 62.95L739.45 65.94L739.45 43.95L735.95 47.45L735.95 62.95Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 17" d="M735.95 62.95L735.95 47.45L739.45 43.95L739.45 65.94L735.95 62.95Z" stroke="#1FDAFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+</svg>

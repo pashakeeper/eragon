@@ -30,7 +30,10 @@
     "sass": "^1.85.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "fancybox": "^3.0.1",
     "jquery": "^3.7.1",
     "reset-css": "^5.0.2"
   }

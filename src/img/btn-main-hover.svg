@@ -1,37 +1,20 @@
-<svg width="204" height="96" viewBox="0 0 204 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_2_33)">
-<g filter="url(#filter1_d_2_33)">
-<path d="M156.964 21H77.2041L72.6582 25.5459H41.6633L21 46.2092V66.8725L29.2653 75.1378H49.102L54.4745 69.7653H71.8316L77.2041 75.1378H172.668L183 64.8061V56.9541L180.107 54.0612V40.8367L183 37.9439V30.5051L177.628 25.1327H161.097L156.964 21Z" fill="url(#paint0_linear_2_33)"/>
-<path d="M156.964 21H77.2041L72.6582 25.5459H41.6633L21 46.2092V66.8725L29.2653 75.1378H49.102L54.4745 69.7653H71.8316L77.2041 75.1378H172.668L183 64.8061V56.9541L180.107 54.0612V40.8367L183 37.9439V30.5051L177.628 25.1327H161.097L156.964 21Z" stroke="#1FDAFF"/>
-</g>
-<path d="M129.275 21H156.964L161.097 25.5459H177.627L182.587 30.5051V37.9439L180.107 40.8367V54.4745L182.587 56.9541L183 64.8061L172.668 75.1378L129.275 74.7245V21Z" fill="#1FDAFF"/>
-<path d="M71.4184 23.8929L74.3113 21H46.2093L43.3164 23.8929H71.4184Z" fill="#1FDAFF" stroke="#1FDAFF" stroke-width="0.5"/>
-<path d="M55.7145 71.4185L51.9951 75.1378H74.7247L71.0053 71.4185H55.7145Z" fill="#1FDAFF" stroke="#1FDAFF" stroke-width="0.5"/>
-</g>
-<defs>
-<filter id="filter0_d_2_33" x="5.5" y="5.5" width="193" height="85.1377" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="7.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.854902 0 0 0 0 1 0 0 0 0.3 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_33"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_33" result="shape"/>
-</filter>
-<filter id="filter1_d_2_33" x="0.5" y="0.5" width="203" height="95.1377" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="10"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.121569 0 0 0 0 0.854902 0 0 0 0 1 0 0 0 0.2 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_33"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_33" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_2_33" x1="102" y1="21" x2="102" y2="75.1378" gradientUnits="userSpaceOnUse">
-<stop stop-color="#101010"/>
-<stop offset="1" stop-color="#1FDAFF"/>
-</linearGradient>
-</defs>
+<svg width="162.500000" height="54.637695" viewBox="0 0 162.5 54.6377" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient x1="81.250000" y1="0.250000" x2="81.250000" y2="54.387695" id="paint_linear_7_7_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#101010"/>
+			<stop offset="1.000000" stop-color="#1FDAFF"/>
+		</linearGradient>
+	</defs>
+	<linearGradient x1="81.250000" y1="0.250000" x2="81.250000" y2="54.387695" id="paint_linear_7_70_0" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#101010"/>
+		<stop offset="1.000000" stop-color="#1FDAFF"/>
+	</linearGradient>
+	<path id="Vector 81" d="M56.45 0.25L136.21 0.25L140.34 4.38L156.87 4.38L162.25 9.75L162.25 17.19L159.35 20.08L159.35 33.31L162.25 36.2L162.25 44.05L151.91 54.38L56.45 54.38L51.08 49.01L33.72 49.01L28.35 54.38L8.51 54.38L0.25 46.12L0.25 25.45L20.91 4.79L51.9 4.79L56.45 0.25Z" fill="url(#paint_linear_7_70_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="Vector 81" d="M108.52 0.25L136.21 0.25L140.34 4.79L156.87 4.79L161.83 9.75L161.83 17.19L159.35 20.08L159.35 33.72L161.83 36.2L162.25 44.05L151.91 54.38L108.52 53.97L108.52 0.25Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 81" d="M53.56 0.25L50.66 3.14L22.56 3.14L25.45 0.25L53.56 0.25Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="Vector 81" d="M31.24 54.38L34.96 50.66L50.25 50.66L53.97 54.38L31.24 54.38Z" fill="#1FDAFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="Vector 81" d="M136.21 0.25L140.34 4.79L156.87 4.79L161.83 9.75L161.83 17.19L159.35 20.08L159.35 33.31L162.25 36.2L162.25 44.05L151.91 54.38L56.45 54.38L51.08 49.01L33.72 49.01L28.35 54.38L8.51 54.38L0.25 46.12L0.25 25.45L20.91 4.79L51.9 4.79L56.45 0.25L136.21 0.25L140.34 4.38L156.87 4.38L162.25 9.75L162.25 17.19L159.35 20.08M151.91 54.38L108.52 53.97L108.52 0.25L136.21 0.25M159.35 20.08L159.35 33.72L161.83 36.2L162.25 44.05M50.66 3.14L22.56 3.14L25.45 0.25L53.56 0.25L50.66 3.14ZM34.96 50.66L50.25 50.66L53.97 54.38L31.24 54.38L34.96 50.66Z" stroke="#1FDAFF" stroke-opacity="1.000000" stroke-width="0.500000"/>
 </svg>

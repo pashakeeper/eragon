@@ -1,4 +1,28 @@
 $(document).ready(function () {
+
+    if ($(window).width() < 768) {
+        AOS.init({
+            disable: true,
+        });
+    } else {
+        AOS.init();
+    }
+    var $btn = $('.up');
+
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 500) {
+            $btn.addClass('active');
+        } else {
+            $btn.removeClass('active');
+        }
+    });
+
+    $btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+
+
     const defaultLang = "en"; // Дефолтный язык (English)
     const storedLang = localStorage.getItem("selectedLang") || defaultLang;
 
@@ -32,5 +56,11 @@ $(document).ready(function () {
             $(".custom-options").hide();
         }
     });
+
+    $('.burger').on('click', function () {
+        $(this).toggleClass("active");
+        // $('.menu_box').slideToggle();
+    });
+    Fancybox.bind('[data-fancybox="gallery"]', {});
 });
 

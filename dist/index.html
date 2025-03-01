@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,20 +11,21 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
+
 <body>
 
 	<!-- header -->
-	 <header class="header" id="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-2">
 					<div class="logo">
 						<a href="/">
 							<img src="img/logo.svg" alt="Site logo">
 						</a>
 					</div>
 				</div>
-				<div class="col-lg-6 menu_box">
+				<div class="col-lg-7 menu_box">
 					<ul class="nav main_menu">
 						<li><a href="#">Home</a></li>
 						<li><a href="#">About Us</a></li>
@@ -32,8 +34,15 @@
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Contacts</a></li>
 					</ul>
+					<a href="#" class="subscription_mobile">Subscription</a>
+					<ul class="nav social_menu mobile_social">
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-telegram"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					</ul>
 				</div>
-				<div class="col-lg-3">
+				<div class="col-lg-3 d-flex align-items-center">
 					<ul class="nav social_menu">
 						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -50,31 +59,374 @@
 							<span class="custom-option" data-lang="ua">UA</span>
 						</div>
 					</div>
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</div>
 		</div>
-	 </header>
+	</header>
 
-	 <!-- section 1 -->
-	  <section class="section_01" id="section_01">
+	<!-- section 1 -->
+	<section class="section_01" id="section_01">
+		<span class="triangle"></span>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
-					<h1><span class="blue">Eragon</span><span class="stroke">- Your</span> <span class="white">Freedom</span> <span class="stroke">to</span> <span class="blue">move</span></h1>
+					<h1><span class="blue">Eragon</span><span class="stroke">- Your</span> <span class="white">Freedom</span> <span class="stroke">to</span> <span class="blue">move</span>
+					</h1>
 					<div class="line"><img src="img/line.svg" alt="Line"></div>
-					<p>Power, speed, up to 100 km range, comfort, accessories, and free maintenance – all included in your rental</p>
-					<a href="#" class="btn main_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+					<div class="d-flex align-items-center">
+						<div class="description">
+							<p>Power, speed, up to 100 km range, <br> comfort, accessories, and free <br> maintenance –
+								all included in your rental</p>
+						</div>
+						<a href="#" class="btn main_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+					</div>
+					<ul class="nav data_list">
+						<li>
+							<p>55 km/h</p>
+							<span>Speed up to</span>
+						</li>
+						<li>
+							<p>100 km</p>
+							<span>Up to on a singe charge</span>
+						</li>
+						<li>
+							<p>3000 W</p>
+							<span>Power up to</span>
+						</li>
+					</ul>
 				</div>
 				<div class="col-lg-5 bike_box">
-					<img src="img/bike.svg" alt="Bike">
-					<a href="#" class="btn main_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+					<img src="img/arrows-elem.svg" alt="Arrows Element" class="arrows_01">
+					<img src="img/arrows-elem.svg" alt="Arrows Element" class="arrows_02">
+					<img class="bike" src="img/bike.svg" alt="Bike">
+					<a href="#" class="btn main_btn mobile_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+				</div>
+				<div class="col-lg-6 mobile_data_box">
+					<ul class="nav data_list">
+						<li>
+							<p>55 km/h</p>
+							<span>Speed up to</span>
+						</li>
+						<li>
+							<p>100 km</p>
+							<span>Up to on a singe charge</span>
+						</li>
+						<li>
+							<p>3000 W</p>
+							<span>Power up to</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-12">
+					<a href="#" class="more">
+						<span class="arrows_box">
+							<img src="img/more-arrow.svg" alt="More Arrow">
+							<img src="img/more-arrow.svg" alt="More Arrow">
+						</span>
+						More
+						<span class="arrows_box">
+							<img src="img/more-arrow.svg" alt="More Arrow">
+							<img src="img/more-arrow.svg" alt="More Arrow">
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>
-	  </section>
+	</section>
+	<!-- Section 2 -->
+	<section class="section_02" id="section_02">
+		<img src="img/section-element-pink.svg" alt="" class="elements_section2">
+		<img src="img/section-element-pink.svg" alt="" class="elements_section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>About Us</h2>
+				</div>
+				<div class="col-lg-6 about_text_box">
+					<h3>Eragon is a leader in e-bike rentals in Vancouver.</h3>
+					<p>Our mission is to make urban commuting convenient, eco-friendly, and accessible.We care about our
+						clients and offer:</p>
+					<ul>
+						<li>Free maintenance throughout the rental period.</li>
+						<li>A full set of accessories for a comfortable ride.</li>
+						<li>Transparent pricing and flexible rental terms.</li>
+					</ul>
+					<h3>Our clients always get more:</h3>
+					<ul>
+						<li>Gift rental days during holidays.</li>
+						<li>Free bike replacement during repairs.</li>
+					</ul>
+					<div class="section_02_line">
+						<img src="img/about_line.svg" alt="About line">
+					</div>
+					<div class="colored_text">Eragon means freedom of movement, reliability, and care for every client.
+					</div>
+				</div>
+				<div class="col-lg-6 abou_buttons_box">
+					<ul class="buttons_list">
+						<li><a href="#"><img src="img/about_icon1.svg" alt="">Environmentally Friendly</a></li>
+						<li><a href="#"><img src="img/about_icon2.svg" alt="">Transparent Pricing</a></li>
+						<li><a href="#"><img src="img/about_icon3.svg" alt="">Comfort in Every Detail</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	
-<script defer="defer" src="js/jquery.min.js"></script>
-<script defer="defer" src="js/main.js"></script>	
+	<!-- section 3 -->
+	<section class="section_03" id="section_03">
+		<span class="triangle"></span>
+		<div class="container">
+			<div class="row m-0">
+				<div class="col-lg-12">
+					<h2>Оur Product – Juliet II</h2>
+					<p class="des">Power, durability, and comfort in every detail.</p>
+				</div>
+				<div class="col-lg-6">
+					<p class="list_title">Juliet II is an e-bike designed for convenience and efficiency:</p>
+					<ul>
+						<li>Speed up to 55 km/h for fast commutes.</li>
+						<li>3000W power for reliable rides.</li>
+						<li>Up to 100 km range on a single charge.</li>
+						<li>Built-in GPS to always know the bike’s location.</li>
+						<li>Convenient display for monitoring all parameters.</li>
+					</ul>
+				</div>
+				<div class="col-lg-6">
+					<p class="list_title">Included in the rental:</p>
+					<ul>
+						<li>Full maintenance.</li>
+						<li>A complete set of accessories (details in the Services section).</li>
+						<li>24/7 customer support.</li>
+					</ul>
+				</div>
+				<div class="col-lg-12">
+					<div class="colored_text">Our bikes deliver comfort, reliability, and performance for every ride.
+					</div>
+				</div>
+				<div class="cunstom_bike_box">
+					<div class="price">300 CAD <br> month</div>
+					<div class="text_row row">
+						<div class="col-lg-6 left_side">
+							<p>Easy-access battery with up to 100 km range.</p>
+							<p>Durable tires for all-season use.</p>
+							<p>Reliable brakes for safe stopping.</p>
+						</div>
+						<div class="col-lg-6 right_side">
+							<p>Ergonomic seat for maximum comfort.</p>
+							<p>Front and rear suspension for a smooth ride.</p>
+							<p>Powerful motor – up to 3000W.</p>
+						</div>
+					</div>
+					<img src="img/bike-with_lines.svg" alt="Bike with lines">
+				</div>
+				<a href="#" class="btn purple_btn">Rent now <img src="img/arrow-white.svg" alt="Arrow"></a>
+			</div>
+		</div>
+	</section>
+	<!-- section 4 -->
+	<section class="section_04" id="section_04">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>Services</h2>
+					<p class="des">Everything for your safety and convenience.</p>
+					<div class="blocks_title">We provide:</div>
+				</div>
+			</div>
+			<div class="services_cutom_row">
+				<div class="services_custom_block">
+					<img src="img/service_icon1.svg" alt="Services icon1">
+					<div class="service_box__title">Free maintenance:</div>
+					<div class="service_box__text">our mechanic is always ready to fix any issues, including on-site
+						service for serious problems.</div>
+				</div>
+				<div class="services_custom_block">
+					<img src="img/service_icon2.svg" alt="Services icon2">
+					<div class="service_box__title">Bike replacement:</div>
+					<div class="service_box__text">we provide a substitute bike during repairs (if possible).</div>
+				</div>
+				<div class="services_custom_block">
+					<img src="img/service_icon3.svg" alt="Services icon3">
+					<div class="service_box__title">24/7 support:</div>
+					<div class="service_box__text">you can always contact us to resolve any issues.</div>
+				</div>
+				<div class="services_custom_block">
+					<img src="img/service_icon4.svg" alt="Services icon4">
+					<div class="service_box__title">Flexible rental terms:</div>
+					<div class="service_box__text">transparent pricing with no hidden fees.</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- section 5 -->
+	<section class="section_05" id="section_05">
+		<span class="shadow"></span>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 galery_list_box">
+					<img class="arrows_galery_01" src="img/arrows-elem.svg" alt="Arrows Element">
+					<div class="galery_title">The rental also includes a complete set of accessories: </div>
+					<div class="galery_desc">Additional items for your comfort.</div>
+					<ul class="galery_list">
+						<li>1. Lock with mount (<span>$230</span>)</li>
+						<li>2. Anti-puncture protection (<span>$245</span>)</li>
+						<li>3. Premium tires (<span>$240</span>)</li>
+						<li>4. Phone holder (<span>$35</span>)</li>
+						<li>5. Left-side mirror (<span>$30</span>)</li>
+						<li>6. Rack (<span>$80</span>)</li>
+						<li>7. Alarm system (<span>$30</span>)</li>
+						<li>8. GPS (<span>$55</span>)</li>
+						<li>9. Bonus accessories</li>
+					</ul>
+					<img class="arrows_galery_02" src="img/arrows-elem.svg" alt="Arrows Element">
+				</div>
+			</div>
+			<div class="row galery_row">
+				<div class="galery_view_box"><a href="img/galery_img1.svg" data-fancybox="gallery"><img src="img/galery_img1.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img2.svg" data-fancybox="gallery"><img src="img/galery_img2.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img3.svg" data-fancybox="gallery"><img src="img/galery_img3.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img4.svg" data-fancybox="gallery"><img src="img/galery_img4.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img5.svg" data-fancybox="gallery"><img src="img/galery_img5.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img6.svg" data-fancybox="gallery"><img src="img/galery_img6.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img7.svg" data-fancybox="gallery"><img src="img/galery_img7.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img8.svg" data-fancybox="gallery"><img src="img/galery_img8.svg" alt=""></a></div>
+				<div class="galery_view_box"><a href="img/galery_img9.svg" data-fancybox="gallery"><img src="img/galery_img9.svg" alt=""></a></div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="colored_text">The total value of all accessories is up to $950 CAD,<br> but they are
+						included in your rental for free</div>
+					<a href="#" class="btn main_btn">Rent now<img src="img/arrow-white.svg" alt="Arrow White"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- section 6 -->
+	<section class="section_06" id="section_06">
+		<img src="img/section-element-pink.svg" alt="" class="elements_section6">
+		<img src="img/section-element-pink.svg" alt="" class="elements_section6">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>Frequently Asked Questions</h2>
+					<p class="des">Answers to the most common questions from our clients</p>
+				</div>
+			</div>
+			<div class="row faq_row">
+				<div class="col-lg-6">
+					<div class="num"></div>
+					<div class="question_title">Question:</div>
+					<div class="question">What should I do if the bike breaks down?</div>
+					<div class="answer_title">Answer:</div>
+					<div class="answer">Contact us, and our mechanic will come to the location to fix the issue</div>
+					<img src="img/faq-line.svg" alt="FAQ Line">
+				</div>
+				<div class="col-lg-6">
+					<div class="num"></div>
+					<div class="question_title">Question:</div>
+					<div class="question">What is included in the rental?</div>
+					<div class="answer_title">Answer:</div>
+					<div class="answer">A full set of accessories, free maintenance, and 24/7 support</div>
+					<img src="img/faq-line.svg" alt="FAQ Line">
+				</div>
+				<div class="col-lg-6">
+					<div class="num"></div>
+					<div class="question_title">Question:</div>
+					<div class="question">How do I rent a bike?</div>
+					<div class="answer_title">Answer:</div>
+					<div class="answer">Click the ‘Rent Now’ button in the ‘Product’ section
+						or on the home page, or follow this link for a seamless online agreement signing, deposit
+						payment, and bike pick-up in downtown Vancouver</div>
+					<img src="img/faq-line.svg" alt="FAQ Line">
+				</div>
+				<div class="col-lg-6">
+					<div class="num"></div>
+					<div class="question_title">Question:</div>
+					<div class="question">What documents are required?</div>
+					<div class="answer_title">Answer:</div>
+					<div class="answer">Only an ID and contact details</div>
+					<img src="img/faq-line.svg" alt="FAQ Line">
+				</div>
+				<a href="#" class="btn red_btn"> View all FAQs <i class="fa fa-angle-right"></i></a>
+			</div>
+		</div>
+	</section>
+	<!-- section 7 -->
+	<section class="section_07" id="section_07">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>Contact Us</h2>
+					<p class="des">We are always ready to answer your questions</p>
+				</div>
+				<div class="form_box">
+					<form action="">
+						<div class="form_title">Subject</div>
+						<textarea name="" id="" placeholder="Describe your question or issue"></textarea>
+						<input type="text" placeholder="Your name">
+						<input type="text" placeholder="Your phone number">
+						<input type="text" placeholder="Your email">
+						<button>Send Message</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- footer -->
+	<footer class="footer" id="footer">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-4">
+					<ul class="footer_list">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About Us </a></li>
+						<li><a href="#">Product</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contacts</a></li>
+						<li><a href="#">SUBSCRIBTIONS</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-4">
+					<div class="footer_logo">
+						<a href="#">
+							<img src="img/footer_logo.svg" alt="">
+						</a>
+					</div>
+					<p class="partner">Your partner for flawless rides</p>
+				</div>
+				<div class="col-lg-4">
+					<a href="#" class="privacy">Privacy Policy</a>
+					<p class="copyright">
+						© 2024 Eragon. <br><br>
+						All rights reserved
+					</p>
+				</div>
+				<div class="col-lg-12">
+					<img src="img/footer_line.svg" alt="" class="footer_line">
+					<ul class="nav footer_social_list">
+						<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fab fa-telegram"></i></a></li>
+						<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					</ul>
+					<p class="follow">Follow us on  social media</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#" class="up"><img src="img/up.svg" alt=""></a>
+	<script defer="defer" src="js/jquery.min.js"></script>
+	<script defer="defer" src="js/fancybox.umd.js"></script>
+	<script defer="defer" src="js/aos.js"></script>
+	<script defer="defer" src="js/main.js"></script>
 </body>
+
 </html>
