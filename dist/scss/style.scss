@@ -663,10 +663,10 @@ p {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    //background-image: url("../img/bike_line_bg.svg");
-    //background-size: 100% 100%;
-    //background-repeat: no-repeat;
-    //position: relative;
+    background-image: url("../img/bike_line_bg.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
     img {
       width: 100%;
       max-height: 871px;
@@ -987,7 +987,7 @@ p {
   border: 2.5px solid rgb(227, 19, 115);
   h2 {
     color: rgb(255, 255, 255);
-    font-size: clamp(40px, 5vw, 80px);
+    font-size: 80px;
     font-weight: 700;
     line-height: 98px;
     text-align: center;

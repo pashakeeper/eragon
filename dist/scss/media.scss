@@ -11,6 +11,9 @@
   .section_03 .right_side p:nth-child(3) {
     right: 147px;
   }
+  .section_03 .cunstom_bike_box {
+    background-size: 100% auto;
+  }
   .section_04 .services_cutom_row .services_custom_block {
     max-width: 24%;
     background-size: 100% 100%;
@@ -42,12 +45,10 @@
   .container {
     max-width: 90%;
   }
-  body {
-    .main_btn,.purple_btn {
-      max-width: 250px;
-      font-size: large;
-      z-index: 2;
-    }
+  .section_01 .main_btn {
+    max-width: 250px;
+    font-size: large;
+    z-index: 2;
   }
   .section_02 .buttons_list li a {
     font-size: 22px;
@@ -69,31 +70,6 @@
       height: 50%;
       width: 100%;
     }
-  }
-  .section_05 .arrows_galery_01 {
-    left: 1.5%;
-  }
-  .section_05 .arrows_galery_02 {
-    right: 1.5%;
-  }
-  .section_05 .galery_list li {
-    margin-bottom: 15px;
-    font-size: 18px;
-    line-height: normal;
-  }
-  .section_02 h2,.section_03 h2,.section_04 h2,.section_06 h2,.section_07 h2 {
-    font-size: clamp(40px, 3.5vw, 80px);
-  }
-  .section_07 .des {
-    font-size: 20px;
-    margin-bottom: 60px;
-  }
-  .section_07 {
-    padding: 80px 0;
-    background-size: auto;
-  }
-  .footer {
-    padding: 90px 0;
   }
 }
 @media (max-width: 1285px) {
