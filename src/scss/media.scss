@@ -1,0 +1,55 @@
+@media (max-width: 1980px) {
+  .section_03 .left_side p:nth-child(2) {
+    left: 130px;
+  }
+  .section_03 .right_side p:first-child {
+    right: 69px;
+  }
+  .section_03 .right_side p:nth-child(2) {
+    right: 130px;
+  }
+  .section_03 .right_side p:nth-child(3) {
+    right: 147px;
+  }
+  .section_03 .cunstom_bike_box {
+    background-size: 100% auto;
+  }
+  .section_04 .services_cutom_row .services_custom_block {
+    max-width: 24%;
+  }
+  .section_04 .services_cutom_row,.section_05 .galery_row {
+    column-gap: unset;
+    justify-content: space-between;
+  }
+  .section_05 .galery_view_box {
+    max-width: 32%;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1285px) {
+  .section_03 .left_side p:nth-child(2) {
+    left: 50px;
+    top: 320px;
+  }
+  .section_03 .right_side p:first-child {
+    right: 29px;
+  }
+  .section_03 .left_side p:first-child {
+    left: 29px;
+  }
+  .section_03 .right_side p:nth-child(2) {
+    right: 50px;
+    top: 300px;
+  }
+  .section_03 .right_side p:nth-child(3) {
+    right: 87px;
+    bottom: 230px;
+  }
+  .section_03 .left_side p:nth-child(3) {
+    left: 29px;
+    bottom: 230px;
+  }
+}

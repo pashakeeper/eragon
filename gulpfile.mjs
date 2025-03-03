@@ -31,11 +31,12 @@ export function fonts() {
     return src([
         'src/fonts/**/*.{woff,woff2,ttf,eot,otf}',
         'src/fonts/**/*.css',
-
     ])
         .pipe(dest('dist/fonts'))
+        .on('end', () => console.log('Шрифты скопированы в dist/fonts'))
         .pipe(browserSync.stream());
 }
+
 export function libs() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
