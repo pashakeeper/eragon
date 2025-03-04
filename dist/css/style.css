@@ -150,8 +150,6 @@ p {
   color: rgb(218, 218, 218);
   font-size: clamp(18px, 1.5vw, 26px);
   font-weight: 500;
-  line-height: 33px;
-  letter-spacing: 0%;
   text-align: left;
   text-transform: uppercase;
   position: relative;
@@ -169,6 +167,9 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease 0s;
+}
+.main_menu li a:hover {
+  color: #1fdaff;
 }
 .main_menu li a:hover:after {
   opacity: 1;
@@ -251,7 +252,7 @@ p {
   clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
 }
 .section_01 h1 {
-  font-size: clamp(32px, 5vw, 108px);
+  font-size: clamp(34px, 5vw, 108px);
   text-transform: uppercase;
   font-family: "Nulshock";
   letter-spacing: -3px;
@@ -278,6 +279,9 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+.section_01 .mobile_btn {
+  display: none;
+}
 
 .bike_box {
   background-image: url("../img/bike-bg.svg");
@@ -290,9 +294,6 @@ p {
 .bike_box .bike {
   width: 100%;
   margin-left: -60px;
-}
-.bike_box .mobile_btn {
-  display: none;
 }
 
 .arrows_01,
@@ -332,8 +333,6 @@ p {
   justify-content: center;
   font-size: 28px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 0px;
   color: white;
   transition: all 0.3s ease 0s;
 }
@@ -379,15 +378,12 @@ p {
 .data_list p {
   font-size: 36px;
   font-weight: 600;
-  line-height: 36px;
-  text-align: left;
   text-transform: uppercase;
   margin-bottom: 22px;
 }
 .data_list span {
   font-size: 22px;
   font-weight: 500;
-  line-height: 28px;
 }
 
 .more {
@@ -397,10 +393,12 @@ p {
   justify-content: center;
   font-size: 27px;
   font-weight: 600;
-  line-height: 33px;
+  max-width: fit-content;
   text-transform: uppercase;
   color: #1fdaff;
   column-gap: 14px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .more .arrows_box {
   display: flex;
@@ -462,7 +460,6 @@ p {
 .section_02 h3 {
   font-size: 26px;
   font-weight: 600;
-  line-height: 36px;
   text-align: left;
   text-transform: uppercase;
   color: white;
@@ -471,7 +468,6 @@ p {
 .section_02 .about_text_box p {
   font-size: 24px;
   font-weight: 500;
-  line-height: 30px;
   color: rgb(237, 237, 237);
   margin-bottom: 30px;
 }
@@ -505,8 +501,6 @@ p {
   color: rgb(227, 19, 115);
   font-size: 26px;
   font-weight: 700;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: left;
   text-transform: uppercase;
   margin-top: 37px;
@@ -529,7 +523,6 @@ p {
   font-size: 26px;
   font-weight: 500;
   color: white;
-  line-height: 30px;
   max-width: 622px;
   width: 100%;
   height: 143.8px;
@@ -592,8 +585,6 @@ p {
   text-fill-color: transparent;
   font-size: 80px;
   font-weight: 700;
-  line-height: 98px;
-  letter-spacing: -1%;
   text-transform: uppercase;
   margin-bottom: 42px;
 }
@@ -601,8 +592,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 30px;
   font-weight: 500;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 70px;
@@ -611,8 +600,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 24px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: left;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -625,8 +612,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 23px;
   font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0%;
   text-align: left;
 }
 .section_03 ul li:last-child {
@@ -652,7 +637,6 @@ p {
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
-  line-height: 38px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -676,7 +660,6 @@ p {
   color: white;
   font-size: 34px;
   font-weight: 700;
-  line-height: 38px;
   text-align: center;
   text-transform: uppercase;
   top: 65px;
@@ -688,7 +671,6 @@ p {
   color: rgb(237, 237, 237);
   font-size: 23px;
   font-weight: 500;
-  line-height: 28px;
   text-align: center;
 }
 .section_03 .left_side p:first-child {
@@ -714,7 +696,6 @@ p {
   color: rgb(237, 237, 237);
   font-size: 23px;
   font-weight: 500;
-  line-height: 28px;
   text-align: center;
 }
 .section_03 .right_side p:first-child {
@@ -752,6 +733,7 @@ p {
 }
 .purple_btn:hover {
   background-image: url("../img/btn-purple-hover.svg");
+  color: white;
 }
 .purple_btn:hover img {
   right: -10px;
@@ -768,7 +750,6 @@ p {
   text-fill-color: transparent;
   font-size: 80px;
   font-weight: 700;
-  letter-spacing: -1%;
   text-transform: uppercase;
   margin-bottom: 42px;
   width: fit-content;
@@ -780,8 +761,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 30px;
   font-weight: 500;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 104px;
@@ -790,8 +769,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 49px;
@@ -829,7 +806,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 26px;
   font-weight: 600;
-  line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -838,8 +814,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 23px;
   font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0%;
   text-align: center;
 }
 
@@ -889,7 +863,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 21px;
@@ -898,16 +871,12 @@ p {
   color: rgb(205, 202, 208);
   font-size: 28px;
   font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0%;
   text-align: center;
   margin-bottom: 79px;
 }
 .section_05 .galery_list li {
   font-size: 28px;
   font-weight: 500;
-  line-height: 36px;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -943,8 +912,6 @@ p {
   font-size: 30px;
   font-style: italic;
   font-weight: 700;
-  line-height: 38px;
-  letter-spacing: -1%;
   text-align: center;
   text-transform: uppercase;
   margin-top: 102px;
@@ -969,7 +936,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: clamp(40px, 5vw, 80px);
   font-weight: 700;
-  line-height: 98px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 42px;
@@ -978,7 +944,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 30px;
   font-weight: 500;
-  line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 110px;
@@ -990,8 +955,6 @@ p {
   color: rgb(227, 19, 115);
   font-size: 80px;
   font-weight: 600;
-  line-height: 98px;
-  letter-spacing: -1%;
   text-align: left;
   text-transform: uppercase;
 }
@@ -1019,7 +982,6 @@ p {
   color: rgb(227, 19, 115);
   font-size: 28px;
   font-weight: 600;
-  line-height: 36px;
   text-align: left;
   text-decoration-line: underline;
   text-transform: uppercase;
@@ -1030,31 +992,8 @@ p {
   color: rgb(205, 202, 208);
   font-size: 23px;
   font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 0%;
   text-align: left;
   margin-bottom: 35px;
-}
-.section_06 .red_btn {
-  color: rgb(255, 255, 255);
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 0%;
-  text-align: left;
-  max-width: 322px;
-  height: 107px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("../img/btn_red.svg");
-  background-size: 100% 100%;
-  transition: all 0.3s ease 0s;
-}
-.section_06 .red_btn:hover {
-  background-image: url("../img/btn_red_hover.svg");
-}
-.section_06 .red_btn i {
-  margin-left: 10px;
 }
 .section_06 .elements_section6 {
   position: absolute;
@@ -1069,6 +1008,27 @@ p {
   transform: scaleX(-1);
 }
 
+.red_btn {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  font-weight: 600;
+  text-align: left;
+  max-width: 322px;
+  height: 107px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/btn_red.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease 0s;
+}
+.red_btn:hover {
+  background-image: url("../img/btn_red_hover.svg");
+}
+.red_btn i {
+  margin-left: 10px;
+}
+
 .section_07 {
   padding-top: 115px;
   padding-bottom: 160px;
@@ -1080,7 +1040,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 80px;
   font-weight: 700;
-  line-height: 98px;
   text-align: center;
   text-transform: uppercase;
   bottom: 42px;
@@ -1089,7 +1048,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 30px;
   font-weight: 500;
-  line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 120px;
@@ -1109,7 +1067,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 36px;
@@ -1130,7 +1087,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 23px;
   font-weight: 400;
-  line-height: 28px;
   text-align: left;
   outline: 0;
 }
@@ -1142,7 +1098,6 @@ p {
   color: rgb(205, 202, 208);
   font-size: 23px;
   font-weight: 400;
-  line-height: 28px;
   text-align: left;
   display: flex;
   align-items: flex-start;
@@ -1155,7 +1110,6 @@ p {
   color: rgb(255, 255, 255);
   font-size: 30px;
   font-weight: 600;
-  line-height: 36px;
   text-align: left;
   text-transform: uppercase;
   height: 89px;
@@ -1178,7 +1132,6 @@ p {
 .footer .footer_list {
   font-size: 30px;
   font-weight: 500;
-  line-height: 60px;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
@@ -1196,8 +1149,6 @@ p {
   color: rgb(190, 190, 190);
   font-size: 30px;
   font-weight: 500;
-  line-height: 28px;
-  text-align: left;
   text-align: center;
 }
 .footer .footer_logo {
@@ -1214,7 +1165,6 @@ p {
   color: rgb(190, 190, 190);
   font-size: 30px;
   font-weight: 500;
-  line-height: 28px;
   text-align: right;
   display: block;
   margin-left: auto;
@@ -1248,7 +1198,6 @@ p {
   color: rgb(190, 190, 190);
   font-size: 30px;
   font-weight: 500;
-  line-height: 28px;
   text-align: center;
   margin-top: 30px;
 }
@@ -1277,4 +1226,12 @@ p {
 }
 .up:hover {
   background: rgb(31, 218, 255);
+}
+
+.close {
+  display: none;
+}
+
+.arrows, .mobile_footer_line {
+  display: none;
 }

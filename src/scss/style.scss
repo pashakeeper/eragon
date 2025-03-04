@@ -140,8 +140,6 @@ p {
     color: rgb(218, 218, 218);
     font-size: clamp(18px, 1.5vw, 26px);
     font-weight: 500;
-    line-height: 33px;
-    letter-spacing: 0%;
     text-align: left;
     text-transform: uppercase;
     position: relative;
@@ -160,6 +158,7 @@ p {
       transition: all 0.3s ease 0s;
     }
     &:hover {
+      color: #1fdaff;
       &:after {
         opacity: 1;
         visibility: visible;
@@ -243,7 +242,7 @@ p {
     clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
   }
   h1 {
-    font-size: clamp(32px, 5vw, 108px);
+    font-size: clamp(34px, 5vw, 108px);
     text-transform: uppercase;
     font-family: "Nulshock";
     letter-spacing: -3px;
@@ -272,6 +271,9 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+  .mobile_btn {
+    display: none;
+  }
 }
 .bike_box {
   background-image: url("../img/bike-bg.svg");
@@ -283,9 +285,6 @@ p {
   .bike {
     width: 100%;
     margin-left: -60px;
-  }
-  .mobile_btn {
-    display: none;
   }
 }
 .arrows_01,
@@ -311,6 +310,7 @@ p {
     text-transform: uppercase;
     letter-spacing: 4px;
   }
+
 }
 .btn {
   max-width: 322px;
@@ -321,8 +321,6 @@ p {
   justify-content: center;
   font-size: 28px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 0px;
   color: white;
   transition: all 0.3s ease 0s;
   img {
@@ -364,15 +362,12 @@ p {
   p {
     font-size: 36px;
     font-weight: 600;
-    line-height: 36px;
-    text-align: left;
     text-transform: uppercase;
     margin-bottom: 22px;
   }
   span {
     font-size: 22px;
     font-weight: 500;
-    line-height: 28px;
   }
 }
 .more {
@@ -382,10 +377,12 @@ p {
   justify-content: center;
   font-size: 27px;
   font-weight: 600;
-  line-height: 33px;
+  max-width: fit-content;
   text-transform: uppercase;
   color: #1fdaff;
   column-gap: 14px;
+  margin-left: auto;
+  margin-right: auto;
 
   .arrows_box {
     display: flex;
@@ -452,7 +449,6 @@ p {
   h3 {
     font-size: 26px;
     font-weight: 600;
-    line-height: 36px;
     text-align: left;
     text-transform: uppercase;
     color: white;
@@ -462,7 +458,6 @@ p {
     p {
       font-size: 24px;
       font-weight: 500;
-      line-height: 30px;
       color: rgb(237, 237, 237);
       margin-bottom: 30px;
     }
@@ -497,8 +492,6 @@ p {
     color: rgb(227, 19, 115);
     font-size: 26px;
     font-weight: 700;
-    line-height: 36px;
-    letter-spacing: -1%;
     text-align: left;
     text-transform: uppercase;
     margin-top: 37px;
@@ -520,7 +513,6 @@ p {
       font-size: 26px;
       font-weight: 500;
       color: white;
-      line-height: 30px;
       max-width: 622px;
       width: 100%;
       height: 143.8px;
@@ -594,8 +586,6 @@ p {
     text-fill-color: transparent;
     font-size: 80px;
     font-weight: 700;
-    line-height: 98px;
-    letter-spacing: -1%;
     text-transform: uppercase;
     margin-bottom: 42px;
   }
@@ -603,8 +593,6 @@ p {
     color: rgb(205, 202, 208);
     font-size: 30px;
     font-weight: 500;
-    line-height: 36px;
-    letter-spacing: -1%;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 70px;
@@ -613,8 +601,8 @@ p {
     color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: 600;
-    line-height: 36px;
-    letter-spacing: -1%;
+
+
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -626,8 +614,8 @@ p {
       color: rgb(205, 202, 208);
       font-size: 23px;
       font-weight: 500;
-      line-height: 28px;
-      letter-spacing: 0%;
+
+
       text-align: left;
       &:last-child {
         margin-bottom: 0;
@@ -654,7 +642,6 @@ p {
     font-size: 30px;
     font-style: italic;
     font-weight: 700;
-    line-height: 38px;
     text-align: center;
     text-transform: uppercase;
   }
@@ -682,7 +669,6 @@ p {
     color: white;
     font-size: 34px;
     font-weight: 700;
-    line-height: 38px;
     text-align: center;
     text-transform: uppercase;
     top: 65px;
@@ -695,7 +681,7 @@ p {
       color: rgb(237, 237, 237);
       font-size: 23px;
       font-weight: 500;
-      line-height: 28px;
+
       text-align: center;
     }
     p:first-child {
@@ -723,7 +709,7 @@ p {
       color: rgb(237, 237, 237);
       font-size: 23px;
       font-weight: 500;
-      line-height: 28px;
+
       text-align: center;
     }
     p:first-child {
@@ -761,6 +747,7 @@ p {
   }
   &:hover {
     background-image: url("../img/btn-purple-hover.svg");
+    color: white;
     img {
       right: -10px;
     }
@@ -785,7 +772,7 @@ p {
     text-fill-color: transparent;
     font-size: 80px;
     font-weight: 700;
-    letter-spacing: -1%;
+
     text-transform: uppercase;
     margin-bottom: 42px;
     width: fit-content;
@@ -797,8 +784,8 @@ p {
     color: rgb(205, 202, 208);
     font-size: 30px;
     font-weight: 500;
-    line-height: 36px;
-    letter-spacing: -1%;
+
+
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 104px;
@@ -807,8 +794,8 @@ p {
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 600;
-    line-height: 36px;
-    letter-spacing: -1%;
+
+
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 49px;
@@ -844,7 +831,6 @@ p {
         color: rgb(255, 255, 255);
         font-size: 26px;
         font-weight: 600;
-        line-height: 36px;
         text-align: center;
         text-transform: uppercase;
         margin-bottom: 20px;
@@ -853,8 +839,8 @@ p {
         color: rgb(205, 202, 208);
         font-size: 23px;
         font-weight: 500;
-        line-height: 28px;
-        letter-spacing: 0%;
+
+
         text-align: center;
       }
     }
@@ -907,7 +893,7 @@ p {
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-weight: 600;
-    line-height: 36px;
+
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 21px;
@@ -916,8 +902,8 @@ p {
     color: rgb(205, 202, 208);
     font-size: 28px;
     font-weight: 500;
-    line-height: 28px;
-    letter-spacing: 0%;
+
+
     text-align: center;
     margin-bottom: 79px;
   }
@@ -925,8 +911,8 @@ p {
     li {
       font-size: 28px;
       font-weight: 500;
-      line-height: 36px;
-      letter-spacing: -1%;
+
+
       text-align: center;
       text-transform: uppercase;
       color: white;
@@ -963,8 +949,6 @@ p {
     font-size: 30px;
     font-style: italic;
     font-weight: 700;
-    line-height: 38px;
-    letter-spacing: -1%;
     text-align: center;
     text-transform: uppercase;
     margin-top: 102px;
@@ -989,7 +973,6 @@ p {
     color: rgb(255, 255, 255);
     font-size: clamp(40px, 5vw, 80px);
     font-weight: 700;
-    line-height: 98px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 42px;
@@ -998,7 +981,7 @@ p {
     color: rgb(205, 202, 208);
     font-size: 30px;
     font-weight: 500;
-    line-height: 36px;
+
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 110px;
@@ -1010,8 +993,6 @@ p {
     color: rgb(227, 19, 115);
     font-size: 80px;
     font-weight: 600;
-    line-height: 98px;
-    letter-spacing: -1%;
     text-align: left;
     text-transform: uppercase;
   }
@@ -1039,7 +1020,7 @@ p {
     color: rgb(227, 19, 115);
     font-size: 28px;
     font-weight: 600;
-    line-height: 36px;
+
     text-align: left;
     text-decoration-line: underline;
     text-transform: uppercase;
@@ -1050,31 +1031,10 @@ p {
     color: rgb(205, 202, 208);
     font-size: 23px;
     font-weight: 500;
-    line-height: 28px;
-    letter-spacing: 0%;
+
+
     text-align: left;
     margin-bottom: 35px;
-  }
-  .red_btn {
-    color: rgb(255, 255, 255);
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 36px;
-    letter-spacing: 0%;
-    text-align: left;
-    max-width: 322px;
-    height: 107px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("../img/btn_red.svg");
-    background-size: 100% 100%;
-    transition: all 0.3s ease 0s;
-    &:hover {
-      background-image: url("../img/btn_red_hover.svg");
-    }
-    i {
-      margin-left: 10px;
-    }
   }
   .elements_section6 {
     position: absolute;
@@ -1089,6 +1049,26 @@ p {
     }
   }
 }
+.red_btn {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  font-weight: 600;
+  text-align: left;
+  max-width: 322px;
+  height: 107px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/btn_red.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-image: url("../img/btn_red_hover.svg");
+  }
+  i {
+    margin-left: 10px;
+  }
+}
 .section_07 {
   padding-top: 115px;
   padding-bottom: 160px;
@@ -1099,7 +1079,6 @@ p {
     color: rgb(255, 255, 255);
     font-size: 80px;
     font-weight: 700;
-    line-height: 98px;
     text-align: center;
     text-transform: uppercase;
     bottom: 42px;
@@ -1108,7 +1087,7 @@ p {
     color: rgb(205, 202, 208);
     font-size: 30px;
     font-weight: 500;
-    line-height: 36px;
+
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 120px;
@@ -1127,7 +1106,7 @@ p {
       color: rgb(255, 255, 255);
       font-size: 30px;
       font-weight: 600;
-      line-height: 36px;
+
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 36px;
@@ -1147,7 +1126,7 @@ p {
         color: rgb(205, 202, 208);
         font-size: 23px;
         font-weight: 400;
-        line-height: 28px;
+
         text-align: left;
         outline: 0;
       }
@@ -1159,7 +1138,7 @@ p {
         color: rgb(205, 202, 208);
         font-size: 23px;
         font-weight: 400;
-        line-height: 28px;
+
         text-align: left;
         display: flex;
         align-items: flex-start;
@@ -1172,7 +1151,7 @@ p {
         color: rgb(255, 255, 255);
         font-size: 30px;
         font-weight: 600;
-        line-height: 36px;
+
         text-align: left;
         text-transform: uppercase;
         height: 89px;
@@ -1196,7 +1175,6 @@ p {
   .footer_list {
     font-size: 30px;
     font-weight: 500;
-    line-height: 60px;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
@@ -1216,8 +1194,7 @@ p {
     color: rgb(190, 190, 190);
     font-size: 30px;
     font-weight: 500;
-    line-height: 28px;
-    text-align: left;
+
     text-align: center;
   }
   .footer_logo {
@@ -1234,7 +1211,7 @@ p {
     color: rgb(190, 190, 190);
     font-size: 30px;
     font-weight: 500;
-    line-height: 28px;
+
     text-align: right;
     display: block;
     margin-left: auto;
@@ -1269,7 +1246,7 @@ p {
     color: rgb(190, 190, 190);
     font-size: 30px;
     font-weight: 500;
-    line-height: 28px;
+
     text-align: center;
     margin-top: 30px;
   }
@@ -1298,4 +1275,10 @@ p {
   &:hover {
     background:rgb(31, 218, 255);
   }
+}
+.close {
+  display: none;
+}
+.arrows,.mobile_footer_line {
+  display: none;
 }

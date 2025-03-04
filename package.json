@@ -37,6 +37,7 @@
     "bootstrap": "^5.3.3",
     "fancybox": "^3.0.1",
     "jquery": "^3.7.1",
-    "reset-css": "^5.0.2"
+    "reset-css": "^5.0.2",
+    "slick-carousel": "^1.8.1"
   }
 }

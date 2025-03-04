@@ -1,117 +1,85 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
-const watch = require('gulp-watch');
 const concat = require('gulp-concat');
-var clean = require('gulp-clean');
+const clean = require('gulp-clean');
 
-function htmlPipe() {
-    return gulp.src(['src/*.html', 'src/**'])
-        .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.stream());
-}
-
-function compileSass() {
-    return gulp.src([
-        'src/scss/**/*.scss',
-    ])
+// === Компиляция SCSS ===
+function styles() {
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 }
 
-function movecss() {
-    return gulp.src(['src/scss/**/*.css'])
-        .pipe(gulp.dest('dist/css'))
+// === Перенос HTML ===
+function html() {
+    return gulp.src('src/**/*.html')
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.stream());
 }
 
+
+// === Перенос JS библиотек ===
 function libsJs() {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
         'node_modules/aos/dist/aos.js',
-        'node_modules/swiper/swiper-bundle.min.js'
+        'node_modules/slick-carousel/slick/slick.min.js'
     ])
-        .pipe(concat('libs.js'))
-        .pipe(gulp.dest('src/js'))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
 }
 
-function libsCSS() {
-    return gulp.src([
-        'node_modules/aos/dist/aos.css',
-        'node_modules/bootstrap/dist/css/bootstrap.min.css',
-        'node_modules/swiper/swiper-bundle.min.css'
-    ])
-        .pipe(concat('libs.css'))
-        .pipe(gulp.dest('src/scss'))
-}
-
+// === Очистка `dist` ===
 function cleanFiles() {
-    return gulp.src([
-        'dist/css/**/*',
-        'dist/js/**/*',
-        'dist/img/**/*',
-        'src/scss/**/*.scss',
-        'src/scss/**/*.css',
-        '!src/scss/**/bootstrap.min.css',
-        '!src/scss/style.scss',
-        '!src/scss/media.scss',
-    ])
-        .pipe(clean({force: true}))
-
-
+    return gulp.src('dist/*', { read: false, allowEmpty: true })
+        .pipe(clean());
 }
 
-function javaScript() {
+// === Перенос JavaScript файлов ===
+function scripts() {
     return gulp.src('src/js/**/*.js')
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 }
 
+// === Перенос Изображений ===
 function images() {
-    return gulp.src('src/img/*')
+    return gulp.src('src/img/**/*')
         .pipe(gulp.dest('dist/img'))
         .pipe(browserSync.stream());
 }
 
-function browserSyncInit(done) {
-    browserSync.init({
-        server: {
-            baseDir: 'dist/',
-        },
-        port: 3000,
-    }, done);
-}
-
+// === Перенос Шрифтов ===
 function fonts() {
-    return gulp.src('src/fonts/*')
+    return gulp.src('src/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
         .pipe(browserSync.stream());
 }
 
-function dataJson() {
-    return gulp.src('src/data/*')
-        .pipe(gulp.dest('dist/data'))
-        .pipe(browserSync.stream());
-}
-
-// function gulpWatch() {
-//     return watch('gulpfile.js',gulp.parallel(cleanFiles,libsCSS, libsJs, images,watchFiles) ,browserSync.reload());
-// }
 
 
-function watchFiles() {
-    gulp.watch('src/scss/*', gulp.parallel(compileSass, movecss));
-    gulp.watch('src/js/*.js', javaScript);
-    gulp.watch('src/*.html', htmlPipe);
+// === Запуск Live-сервера ===
+function serve() {
+    browserSync.init({
+        server: { baseDir: 'dist/' },
+        port: 3000,
+        notify: false
+    });
+
+    gulp.watch('src/scss/**/*.scss', styles);
+    gulp.watch('src/js/**/*.js', scripts);
+    gulp.watch('src/**/*.html', html);
     gulp.watch('src/img/**/*', images);
-    gulp.watch('src/fonts/*', fonts);
-    gulp.watch('src/data/*',dataJson);
+    gulp.watch('src/fonts/**/*', fonts);
 }
 
-// Добавлен gulpWatch в массив задач для watchFiles
-gulp.task('default', gulp.parallel(browserSyncInit, watchFiles));
-gulp.task('sass', compileSass);
-gulp.task('move', gulp.parallel(fonts, images, htmlPipe));
-gulp.task('libs', gulp.parallel(libsJs, libsCSS));
-gulp.task('cleanfile', cleanFiles);
+// === Основные задачи ===
+gulp.task('build', gulp.series(
+    cleanFiles,
+    gulp.parallel(styles, scripts, html, images, fonts, libsJs)
+));
+gulp.task('libs', gulp.series(libsJs));
+gulp.task('default', gulp.series('build', serve));
