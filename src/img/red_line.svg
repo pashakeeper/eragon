@@ -1,0 +1,26 @@
+<svg width="759.400391" height="91.799805" viewBox="0 0 759.4 91.7998" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_599_dd" x="668.599609" y="0.000000" width="90.800781" height="91.799805" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="8.8" result="effect_layerBlur_1"/>
+		</filter>
+		<radialGradient gradientTransform="translate(714 45.8999) rotate(90) scale(19.5 19)" cx="0.000000" cy="0.000000" r="1.000000" id="paint_radial_1_599_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FF459B"/>
+			<stop offset="1.000000" stop-color="#E31373"/>
+		</radialGradient>
+		<linearGradient x1="0.000000" y1="46.398438" x2="703.000000" y2="46.398438" id="paint_linear_1_600_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#E31373" stop-opacity="0.000000"/>
+			<stop offset="1.000000" stop-color="#E31373"/>
+		</linearGradient>
+	</defs>
+	<g opacity="0.680000" filter="url(#filter_1_599_dd)">
+		<ellipse id="Ellipse 15" cx="714.000000" cy="45.899902" rx="19.000000" ry="19.500000" fill="url(#paint_radial_1_599_0)" fill-opacity="1.000000"/>
+	</g>
+	<path id="Vector 15" d="M0 45.39L703 45.39" stroke="url(#paint_linear_1_600_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<circle id="Ellipse 18" cx="714.000000" cy="45.399902" r="8.000000" fill="#E31473" fill-opacity="1.000000"/>
+	<circle id="Ellipse 19" cx="714.000000" cy="45.399902" r="11.500000" stroke="#E31473" stroke-opacity="1.000000" stroke-width="1.000000"/>
+</svg>

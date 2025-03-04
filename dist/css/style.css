@@ -1232,6 +1232,145 @@ p {
   display: none;
 }
 
-.arrows, .mobile_footer_line {
+.arrows {
   display: none;
+}
+
+.footer .mobile_footer_line {
+  display: none;
+}
+
+.faq_section {
+  padding-top: 148px;
+  position: relative;
+}
+.faq_section .gradient::before, .faq_section .gradient::after {
+  content: "";
+  filter: blur(100.2px);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(227, 19, 115) 33.6%, rgb(17, 16, 18) 100%);
+  opacity: 0.4;
+  width: 500px;
+  height: 450px;
+  position: absolute;
+  z-index: -1;
+}
+.faq_section .gradient::before {
+  left: -250px;
+}
+.faq_section .gradient:after {
+  right: -250px;
+  bottom: 0;
+}
+.faq_section h1 {
+  font-size: clamp(30px, 6vw, 80px);
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+.faq_section .des {
+  color: rgb(205, 202, 208);
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 103px;
+}
+.faq_section h2 {
+  font-size: clamp(30px, 3vw, 64px);
+  font-weight: 600;
+  color: white;
+}
+.faq_section .search_box {
+  border-bottom: 1px solid #353535;
+  max-width: 498.02px;
+  height: 46px;
+}
+.faq_section .search_box i {
+  color: #979797;
+  font-size: 23px;
+  margin-right: 10px;
+}
+.faq_section .search_box input {
+  color: #979797;
+  font-size: 23px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+.faq_section .tabs_content .row {
+  opacity: 0;
+  height: 0;
+  transform: rotateY(-90deg) scale(0);
+  transition: all 0.3s ease;
+}
+.faq_section .tabs_content .row.active {
+  display: flex;
+  opacity: 1;
+  transform: rotateY(0deg) scale(1);
+  height: auto;
+}
+.faq_section .tabs_list {
+  justify-content: center;
+  gap: 15px;
+  margin-top: 195px;
+  margin-bottom: 185px;
+  flex-wrap: nowrap;
+}
+.faq_section .tabs_list a {
+  box-sizing: border-box;
+  border: 2px solid rgb(227, 19, 115);
+  border-radius: 43px;
+  background: rgb(16, 16, 16);
+  padding: 0 24px;
+  height: 66px;
+  font-size: 23px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq_section .tabs_list a.active, .faq_section .tabs_list a:hover {
+  background: rgb(227, 19, 115);
+}
+.faq_section .red_line {
+  width: 100%;
+}
+.faq_section .collapse_box {
+  border-top: 3px solid rgb(53, 53, 53);
+  cursor: pointer;
+  padding-top: 35px;
+  margin-bottom: 32px;
+}
+.faq_section .collapse_header {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+.faq_section .collapse_header i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  border: 2px solid rgb(227, 19, 115);
+  color: rgb(227, 19, 115);
+  font-size: 18px;
+}
+.faq_section .collapse_content {
+  display: none;
+  color: rgb(204, 204, 204);
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.faq_section .collapse_header i {
+  transition: transform 0.3s ease;
 }
