@@ -184,6 +184,32 @@
   }
 }
 @media (max-width: 992px) {
+  .section_07 {
+    padding: 50px 0;
+  }
+  .section_07 .form_box form input {
+    height: 43px;
+    font-size: 13px;
+  }
+  .section_07 .form_box form textarea {
+    font-size: 13px;
+    height: 63px;
+  }
+  .description p {
+    font-size: 3.2vw;
+  }
+  .data_list {
+    column-gap: 5px;
+  }
+  .data_list p {
+    font-size: 20px;
+  }
+  .data_list span {
+    font-size: 18px;
+  }
+  .data_list li {
+    max-width: 123px;
+  }
   .faq_section .tabs_list {
     margin: 40px 0;
   }
@@ -455,7 +481,7 @@
     background-repeat: no-repeat;
   }
   .footer {
-    padding-bottom: 40px;
+    padding: 40px 0;
   }
   .footer .footer_line {
     width: 100%;

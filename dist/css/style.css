@@ -1358,6 +1358,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 33px;
+  min-width: 33px;
   height: 33px;
   border-radius: 100%;
   border: 2px solid rgb(227, 19, 115);
