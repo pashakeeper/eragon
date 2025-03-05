@@ -1386,10 +1386,35 @@ p {
   margin-bottom: 121px;
 }
 .rental_section .rental_content {
-  background-image: url("../img/rental-bg.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center top;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 3px solid #5700B1;
+}
+.rental_section .rental_content::before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #5700b1;
+  transform: rotate(45deg);
+  width: 70px;
+  height: 2px;
+  right: -10px;
+  top: 22px;
+}
+.rental_section .rental_content .shape::before {
+  content: "";
+  position: absolute;
+  background-color: #101010;
+  right: -10px;
+  top: 22px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/shape.svg");
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+.rental_section .tabs_list {
+  margin-bottom: -3px;
 }
 .rental_section .tabs_list a {
   display: flex;
@@ -1402,7 +1427,7 @@ p {
   font-weight: 600;
   font-size: clamp(20px, 1.5vw, 40px);
   transform: skewX(45deg);
-  border: 3px solid #5700B1;
+  border: 3.5px solid #5700B1;
   background: #101010;
 }
 .rental_section .tabs_list a span {
@@ -1423,6 +1448,29 @@ p {
 }
 .rental_section .tabs_list li:first-child a span {
   transform: none;
+}
+.rental_section h3 {
+  font-size: clamp(30px, 2vw, 50px);
+  font-weight: 600;
+  color: white;
+  margin-bottom: 81px;
+}
+.rental_section .tabs_content .row {
+  padding-top: 86px;
+}
+.rental_section .tabs_content label {
+  display: block;
+  margin-bottom: 19px;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.rental_section .tabs_content input {
+  margin-bottom: 39px;
+  background: #414141;
+  height: 55px;
+  border: none;
+  width: 100%;
 }
 .rental_section .calendar_container {
   max-width: 400px;
