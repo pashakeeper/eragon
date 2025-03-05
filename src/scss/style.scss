@@ -20,10 +20,12 @@ h2,
 h3,
 h4,
 h5,
-p {
+p {пше
   margin: 0;
 }
-
+input {
+  outline: 0 !important;
+}
 .header {
   width: 100%;
   position: absolute;
@@ -206,7 +208,7 @@ p {
   background-image: url("../img/section_bg1.svg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% auto;
+  background-size: auto;
   padding-bottom: 37px;
   position: relative;
   box-sizing: border-box;

@@ -22,7 +22,7 @@
     margin-right: 0 !important;
   }
   .section_01 {
-    background-size: 100% 110%;
+    background-size: auto;
   }
   .data_list {
     margin-top: 50px;
