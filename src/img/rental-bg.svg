@@ -1,12 +1,13 @@
-<svg width="1767.000000" height="1259.500000" viewBox="0 0 1767 1259.5" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1765.000000" height="1192.000000" viewBox="0 0 1765 1192" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<desc>
 			Created with Pixso.
 	</desc>
 	<defs/>
-	<path id="Vector 29" d="M2 1189.5L2 1.5L163.5 1.5L231 69L913 69L1703.5 69L1764 129.5L1764 1257.5L70 1257.5L2 1189.5Z" fill="#101010" fill-opacity="1.000000" fill-rule="nonzero"/>
-	<path id="Vector 29" d="M2 1189.5L70 1257.5L1764 1257.5L1764 129.5L1703.5 69L913 69L231 69L163.5 1.5L2 1.5L2 1189.5Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="3.000000"/>
-	<path id="Vector 30" d="M1 1229.5L30 1258.5L59 1258.5L1 1200.5L1 1229.5Z" fill="#5700B1" fill-opacity="1.000000" fill-rule="nonzero"/>
-	<path id="Vector 30" d="M1 1229.5L1 1200.5L59 1258.5L30 1258.5L1 1229.5Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="2.000000"/>
-	<path id="Vector 31" d="M1766 92L1740.5 66.5L1715 66.5L1766 117.5L1766 92Z" fill="#5700B1" fill-opacity="1.000000" fill-rule="nonzero"/>
-	<path id="Vector 31" d="M1766 92L1766 117.5L1715 66.5L1740.5 66.5L1766 92Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<rect width="1765.000000" height="1192.000000"/>
+	<path id="Vector 29" d="M1 1123L1 -65L162.5 -65L230 2.5L912 2.5L1702.5 2.5L1763 63L1763 1191L69 1191L1 1123Z" fill="#101010" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 29" d="M1 1123L69 1191L1763 1191L1763 63L1702.5 2.5L912 2.5L230 2.5L162.5 -65L1 -65L1 1123Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="3.000000"/>
+	<path id="Vector 30" d="M0 1163L29 1192L58 1192L0 1134L0 1163Z" fill="#5700B1" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 30" d="M0 1163L0 1134L58 1192L29 1192L0 1163Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<path id="Vector 31" d="M1765 25.5L1739.5 0L1714 0L1765 51L1765 25.5Z" fill="#5700B1" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector 31" d="M1765 25.5L1765 51L1714 0L1739.5 0L1765 25.5Z" stroke="#5700B1" stroke-opacity="1.000000" stroke-width="2.000000"/>
 </svg>

@@ -1375,3 +1375,122 @@ p {
 .faq_section .collapse_header i {
   transition: transform 0.3s ease;
 }
+
+.rental_section {
+  padding-top: 148px;
+}
+.rental_section h2 {
+  color: white;
+  font-size: clamp(30px, 6vw, 80px);
+  font-weight: 700;
+  margin-bottom: 121px;
+}
+.rental_section .rental_content {
+  background-image: url("../img/rental-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+.rental_section .tabs_list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  padding-left: 57px;
+  padding-right: 57px;
+  color: #CDCAD0;
+  font-weight: 600;
+  font-size: clamp(20px, 1.5vw, 40px);
+  transform: skewX(45deg);
+  border: 3px solid #5700B1;
+  background: #101010;
+}
+.rental_section .tabs_list a span {
+  transform: skewX(-45deg);
+}
+.rental_section .tabs_list a.active {
+  background: #5700B1;
+  color: white;
+}
+.rental_section .tabs_list li {
+  margin-left: -1px;
+}
+.rental_section .tabs_list li:first-child a {
+  transform: skew(0);
+  padding-right: 130px;
+  margin-right: -37px;
+  clip-path: polygon(0 0, 69% 0, 100% 100%, 0 100%);
+}
+.rental_section .tabs_list li:first-child a span {
+  transform: none;
+}
+.rental_section .calendar_container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #1E1E1E;
+  border-radius: 10px;
+}
+.rental_section .calendar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.rental_section .calendar_header button, .rental_section .calendar_days button {
+  background: #6A0DAD;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.rental_section .calendar_days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.rental_section .week_scroll {
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+.rental_section .week_scroll .date {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #333;
+  transition: 0.3s;
+}
+.rental_section .date.today {
+  background: #6A0DAD;
+}
+.rental_section .date.selected {
+  background: #A329FF;
+  color: white;
+}
+.rental_section #timePicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+.rental_section .time_slot {
+  width: 22%;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #A329FF;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.rental_section .time_slot.active {
+  background: #A329FF;
+  color: black;
+}

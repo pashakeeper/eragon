@@ -125,6 +125,100 @@ $(document).ready(function () {
             nextArrow: '<button class="scroll-btn scroll-right">→</button>',
         });
     }
+    const today = new Date();
+    let currentMonth = today.getMonth();
+    let currentYear = today.getFullYear();
+    let currentDayIndex = 0;
+
+    function updateCalendar() {
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+
+        $("#currentMonth").text(`${monthNames[currentMonth]} ${currentYear}`);
+        generateWeekView();
+    }
+
+    function generateWeekView() {
+        $("#weekView").empty();
+        let firstDay = new Date(currentYear, currentMonth, 1).getDay();
+        let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+        for (let i = 0; i < 7; i++) {
+            let dateNum = currentDayIndex + i + 1;
+            if (dateNum > lastDate) dateNum -= lastDate;
+
+            let isToday = (dateNum === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear());
+            let dateDiv = $(`<div class="date ${isToday ? "today" : ""}" data-date="${dateNum}">${dateNum}</div>`);
+            dateDiv.on("click", function () {
+                $(".date").removeClass("selected");
+                $(this).addClass("selected");
+            });
+            $("#weekView").append(dateDiv);
+        }
+    }
+
+    function loadTimeSlots() {
+        let times = [
+            "04:00", "05:00", "06:00", "07:00", "08:00",
+            "09:00", "10:00", "11:00", "12:00", "13:00",
+            "14:00", "15:00", "16:00", "17:00", "18:00",
+            "19:00", "20:00", "21:00", "22:00", "23:00"
+        ];
+
+        times.forEach(time => {
+            let timeSlot = $("<div>")
+                .addClass("time_slot")
+                .text(time);
+
+            timeSlot.on("click", function () {
+                $(".time_slot").removeClass("active");
+                $(this).addClass("active");
+            });
+
+            $("#timePicker").append(timeSlot);
+        });
+    }
+    loadTimeSlots();
+
+    $("#prevMonth").click(function () {
+        if (currentMonth === 0) {
+            currentMonth = 11;
+            currentYear--;
+        } else {
+            currentMonth--;
+        }
+        updateCalendar();
+    });
+
+    $("#nextMonth").click(function () {
+        if (currentMonth === 11) {
+            currentMonth = 0;
+            currentYear++;
+        } else {
+            currentMonth++;
+        }
+        updateCalendar();
+    });
+
+    $("#prevWeek").click(function () {
+        if (currentDayIndex > 0) {
+            currentDayIndex -= 7;
+        } else {
+            currentDayIndex = 0;
+        }
+        generateWeekView();
+    });
+
+    $("#nextWeek").click(function () {
+        let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+        if (currentDayIndex + 7 < lastDate) {
+            currentDayIndex += 7;
+        }
+        generateWeekView();
+    });
+
+    updateCalendar();
+
 
 });
 
