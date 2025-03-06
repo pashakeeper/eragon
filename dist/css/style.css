@@ -220,7 +220,7 @@ input {
   background-image: url("../img/section_bg1.svg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: auto;
+  background-size: cover;
   padding-bottom: 37px;
   position: relative;
   box-sizing: border-box;
@@ -780,8 +780,7 @@ input {
 .section_04 .services_cutom_row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 70px;
+  justify-content: space-between;
 }
 .section_04 .services_cutom_row .services_custom_block {
   max-width: 382px;
@@ -799,6 +798,8 @@ input {
   background-position: center top;
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section_04 .services_cutom_row .services_custom_block:hover {
   background-image: url("../img/custom_box_bg_hover.svg");
@@ -1248,6 +1249,17 @@ input {
   padding-top: 148px;
   position: relative;
 }
+.faq_section .elem {
+  position: absolute;
+}
+.faq_section .elem:first-child {
+  right: 0;
+}
+.faq_section .elem:nth-child(2) {
+  left: 0;
+  transform: scaleX(-1);
+  bottom: 0;
+}
 .faq_section .gradient::before, .faq_section .gradient::after {
   content: "";
   filter: blur(100.2px);
@@ -1259,10 +1271,10 @@ input {
   z-index: -1;
 }
 .faq_section .gradient::before {
-  left: -250px;
+  right: -250px;
 }
 .faq_section .gradient:after {
-  right: -250px;
+  left: -250px;
   bottom: 0;
 }
 .faq_section h1 {
@@ -1869,6 +1881,16 @@ input {
 .unsubscribe .un_content {
   position: relative;
   border: 3px solid #5700B1;
+  opacity: 0;
+  height: 0;
+  transform: rotateY(-90deg) scale(0);
+  transition: all 0.3s ease;
+}
+.unsubscribe .un_content.active {
+  display: block;
+  opacity: 1;
+  transform: rotateY(0deg) scale(1);
+  height: auto;
   padding: 85px 57px;
 }
 .unsubscribe .un_content::before {
@@ -1936,4 +1958,216 @@ input {
 }
 .unsubscribe .note img {
   margin-right: 20px;
+}
+.unsubscribe form {
+  display: flex;
+  flex-direction: column;
+}
+.unsubscribe label {
+  font-size: 24px;
+  font-weight: 500;
+  color: #CDCAD0;
+  margin-bottom: 15px;
+}
+.unsubscribe label span {
+  color: #7F7F7F;
+}
+.unsubscribe input {
+  width: 100%;
+  height: 55px;
+  border: none;
+  background: #414141;
+  margin-bottom: 60px;
+}
+.unsubscribe textarea {
+  border: none;
+  background: #414141;
+  margin-bottom: 60px;
+  height: 137px;
+  resize: none;
+}
+.unsubscribe .un_btn {
+  border: 2px solid rgb(87, 0, 177);
+  background: rgb(18, 0, 36);
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  max-width: fit-content;
+  padding-left: 55px;
+  padding-right: 55px;
+  width: 100%;
+  height: 86px;
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.unsubscribe .un_btn:hover {
+  background: #5700B1;
+}
+.unsubscribe .sure {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 147px;
+  text-align: center;
+  margin-top: 456px;
+}
+.unsubscribe .un_content[data-id="2"] .un_btn {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 456px;
+}
+.unsubscribe .un_done {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 103px;
+}
+.unsubscribe .un_text {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 286px;
+  text-align: center;
+}
+.unsubscribe .un_text a {
+  color: #1FDAFF;
+  text-decoration: underline;
+}
+.unsubscribe .un_question {
+  margin-bottom: 75px;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.unsubscribe .un_question a {
+  color: #1FDAFF;
+  text-decoration: underline;
+}
+.unsubscribe .un_content[data-id="3"] form {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.unsubscribe .un_content[data-id="3"] form a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.privacy_policy {
+  padding-top: 148px;
+  position: relative;
+  color: white;
+}
+.privacy_policy .elem {
+  position: absolute;
+}
+.privacy_policy .elem:first-child {
+  right: 0;
+}
+.privacy_policy .gradient::before, .privacy_policy .gradient::after {
+  content: "";
+  filter: blur(100.2px);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(227, 19, 115) 33.6%, rgb(17, 16, 18) 100%);
+  opacity: 0.4;
+  width: 500px;
+  height: 450px;
+  position: absolute;
+  z-index: -1;
+}
+.privacy_policy .gradient::before {
+  right: -250px;
+  background: radial-gradient(50% 50% at 50% 50%, rgb(87, 0, 177) 43.1%, rgb(17, 16, 18) 100%);
+}
+.privacy_policy .gradient:after {
+  left: -250px;
+  bottom: 0;
+}
+.privacy_policy h1 {
+  font-size: clamp(30px, 6vw, 80px);
+  font-weight: 700;
+  margin-bottom: 48px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+.privacy_policy .des {
+  color: rgb(205, 202, 208);
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 202px;
+}
+.privacy_policy h2 {
+  font-size: clamp(23px, 3vw, 40px);
+  font-weight: 600;
+}
+.privacy_policy .text_side {
+  margin-bottom: 130px;
+  line-height: 30px;
+}
+.privacy_policy .text_side .bold {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: white;
+}
+.privacy_policy .text_side .text {
+  font-weight: 500;
+  color: #CCCCCC;
+  margin-bottom: 38px;
+}
+
+.question_section {
+  position: relative;
+  padding-top: 187px;
+  color: white;
+}
+.question_section h2 {
+  font-size: clamp(35px, 4vw, 64px);
+  font-weight: 700;
+  margin-bottom: 127px;
+}
+.question_section .elem {
+  position: absolute;
+}
+.question_section .elem:first-child {
+  right: 0;
+}
+.question_section .elem:nth-child(2) {
+  left: 0;
+  transform: scaleX(-1);
+}
+.question_section .gradient::before, .question_section .gradient::after {
+  content: "";
+  filter: blur(100.2px);
+  background: radial-gradient(50% 50% at 50% 50%, rgb(87, 0, 177) 43.1%, rgb(17, 16, 18) 100%);
+  opacity: 0.4;
+  width: 500px;
+  height: 450px;
+  position: absolute;
+  z-index: -1;
+}
+.question_section .gradient::before {
+  right: -250px;
+}
+.question_section .gradient:after {
+  left: -250px;
+}
+.question_section .contact_btn {
+  max-width: 475.5px;
+  width: 100%;
+  height: 118.5px;
+  background-image: url("../img/contact-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  color: white;
+  margin-bottom: 105px;
+  transition: all 0.5s ease;
+}
+.question_section .contact_btn:first-child {
+  margin-right: 89px;
+}
+.question_section .contact_btn:hover {
+  background-image: url("../img/contact-btn-hover.svg");
 }

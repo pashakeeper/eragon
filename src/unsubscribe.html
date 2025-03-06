@@ -4,6 +4,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Eragon</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
          crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -69,8 +73,6 @@
    </div>
    <div id="overlay"></div>
 </header>
-
-
 <!--unsubscribe section-->
 <section class="unsubscribe" id="unsubscribe">
    <div class="container">
@@ -78,12 +80,16 @@
          <div class="col-lg-12">
             <h2>UNSUBSCRIBE</h2>
          </div>
-         <div class="col-lg-12 un_content">
+         <div class="col-lg-12 un_content active" data-id="1">
             <div class="shape"></div>
             <div class="un_des">Subscription renewal date</div>
             <h3>29 January 2025</h3>
-            <div class="un_text">The subscription can be canceled at any time. <br><br> After canceling the subscription, the bike rental will end at the conclusion of the current paid period.</div>
-            <div class="note"><img src="img/atention.svg" alt="">The cancellation must be made at least 3 days before the next billing date to avoid charges for the following month</div>
+            <div class="un_text">The subscription can be canceled at any time. <br><br> After canceling the
+               subscription, the bike rental will end at the conclusion of the current paid period.
+            </div>
+            <div class="note"><img src="img/atention.svg" alt="">The cancellation must be made at least 3 days before
+               the next billing date to avoid charges for the following month
+            </div>
             <h3>Choose a date and time to return your bike</h3>
             <div class="col-lg-6">
                <div class="calendar_container">
@@ -103,14 +109,37 @@
                   <!-- Выбор времени -->
                   <div id="timePicker" class="time_grid"></div>
                </div>
+               <form action="">
+                  <label>Your ID <span>(sent when subscribing)</span></label>
+                  <input type="text">
+                  <label>Reason for cancellation (optional field)</label>
+                  <textarea></textarea>
+                  <a href="#" class="un_btn" data-target="2">Confirm Cancellation</a>
+               </form>
             </div>
+         </div>
+         <div class="col-lg-12 un_content" data-id="2">
+            <div class="shape"></div>
+            <div class="sure">Are you sure you want to unsubscribe?</div>
+            <a href="#" class="un_btn" data-target="3">Confirm Cancellation</a>
+         </div>
+         <div class="col-lg-12 un_content" data-id="3">
+            <div class="shape"></div>
+            <div class="un_done">Your subscription has been successfully canceled. You will not be charged further.
+            </div>
+            <div class="un_text">You can reactivate your subscription at any time by <a href="#">contacting us</a> or
+               through your account (coming soon)
+            </div>
+            <div class="un_question">Any qustions Find the answer in our <a href="#">FAQ.</a></div>
+            <form action="">
+               <label>Or ask our manager</label>
+               <textarea></textarea>
+               <a href="#" class="un_btn">Ask a question</a>
+            </form>
          </div>
       </div>
    </div>
 </section>
-
-
-
 <!-- footer -->
 <footer class="footer" id="footer">
    <div class="container">

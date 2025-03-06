@@ -4,6 +4,10 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Eragon</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
          crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -77,10 +81,10 @@
             <h2>BIKE RENTAL</h2>
          </div>
          <ul class="nav tabs_list">
-            <li><a href="#" class="active"><span>Info</span></a></li>
-            <li><a href="#"><span>Documents</span></a></li>
-            <li><a href="#"><span>Deposit</span></a></li>
-            <li><a href="#"><span>Subscription</span></a></li>
+            <li><a href="#" class="active" data-id="info"><span>Info</span></a></li>
+            <li><a href="#" data-id="documents"><span>Documents</span></a></li>
+            <li><a href="#" data-id="deposit"><span>Deposit</span></a></li>
+            <li><a href="#" data-id="subscription"><span>Subscription</span></a></li>
          </ul>
          <div class="col-lg-12 rental_content">
             <div class="shape"></div>
@@ -145,19 +149,19 @@
                      </div>
                   </div>
                </div>
-               <div class="row confirm_tab" data-id="confirmation">
-                  <div class="col-lg-12 text-center">
-                     <div class="confirmation-message">
-                        <h3>Your information has been accepted.</h3>
-                        <p>The next step is signing the documents.</p>
-                        <p>You will need to review and sign two documents: <strong>the Rental Agreement</strong> and
-                           <strong>the Liability Agreement</strong>.</p>
-                        <div class="loading-spinner"></div>
-                        <a href="#" class="btn main_btn proceed-btn">Proceed to Documents <img src="img/arrow-white.svg"
-                                                                                               alt=""></a>
-                     </div>
-                  </div>
-               </div>
+               <!--               <div class="row confirm_tab" data-id="confirmation">-->
+               <!--                  <div class="col-lg-12 text-center">-->
+               <!--                     <div class="confirmation-message">-->
+               <!--                        <h3>Your information has been accepted.</h3>-->
+               <!--                        <p>The next step is signing the documents.</p>-->
+               <!--                        <p>You will need to review and sign two documents: <strong>the Rental Agreement</strong> and-->
+               <!--                           <strong>the Liability Agreement</strong>.</p>-->
+               <!--                        <div class="loading-spinner"></div>-->
+               <!--                        <a href="#" class="btn main_btn proceed-btn">Proceed to Documents <img src="img/arrow-white.svg"-->
+               <!--                                                                                               alt=""></a>-->
+               <!--                     </div>-->
+               <!--                  </div>-->
+               <!--               </div>-->
                <div class="row info_tab justify-content-between" data-id="documents">
                   <div class="col-lg-12">
                      <p class="des">Your information has been accepted. The next step is signing the documents. You will
@@ -242,8 +246,8 @@
                      </div>
                      <h3>Contact information:</h3>
                      <div class="d-flex flex-wrap">
-                     <a href="#" class="btn contact_btn">eragon.bike@gmail.com</a>
-                     <a href="#" class="btn contact_btn"> +1 (236) 865 2913   </a>
+                        <a href="#" class="btn contact_btn">eragon.bike@gmail.com</a>
+                        <a href="#" class="btn contact_btn"> +1 (236) 865 2913 </a>
                      </div>
                   </div>
                </div>

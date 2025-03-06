@@ -250,57 +250,41 @@ $(document).ready(function () {
     updateCalendar();
     loadTimeSlots();
     let currentStep = 0;
-
-    const steps = $(".tabs_list li");
+    const steps = $(".tabs_list li a");
     const contents = $(".tabs_content > .row");
+    const nextBtn = $(".purple_btn");
+    const backBtn = $(".back_btn");
 
     function showStep(index) {
         steps.removeClass("active").eq(index).addClass("active");
         contents.removeClass("active").eq(index).addClass("active");
         currentStep = index;
 
-        // Если активен "Subscription", сразу перекидываем на "Finish"
-        if ($(".info_tab[data-id='subscription']").hasClass("active")) {
-            showStep(contents.index($(".info_tab[data-id='finish']")));
-        }
-
-        // Изменение кнопки "Назад" на "Домой" на последнем шаге
-        if ($(".info_tab[data-id='finish']").hasClass("active")) {
-            $(".back_btn").text("Home").addClass("home_btn");
+        if (contents.eq(index).data("id") === "finish") {
+            nextBtn.hide();
+            backBtn.text("Home").addClass("finish").attr("href", "/");
         } else {
-            $(".back_btn").text("Previous").removeClass("home_btn");
-        }
-        if ($(".confirm_tab[data-id='confirmation']").hasClass("active")) {
-            $('.loading-spinner').fadeIn();
-            $('.proceed-btn').removeClass('active').prop('disabled', true);
-
-            setTimeout(function () {
-                $('.loading-spinner').fadeOut();
-                $('.proceed-btn').addClass('active').prop('disabled', false);
-            }, 2000);
+            nextBtn.show();
+            backBtn.text("Previous").removeClass("finish").removeAttr("href");
         }
     }
-    $('.proceed-btn').click(function (e){
-        $(".tabs_content > .row").removeClass("active");
-        $('.info_tab[data-id="documents"]').addClass('active');
-        $('.tabs_list li a').removeClass('active');
-        $('.tabs_list li:nth-child(2) a').addClass('active');
-    });
-
     $(".tabs_list li a").click(function (e) {
         e.preventDefault();
         const index = $(this).parent().index();
         showStep(index);
     });
 
-    $(".purple_btn").click(function (e) {
+    nextBtn.click(function (e) {
         e.preventDefault();
-        showStep(currentStep + 1);
+        if (contents.eq(currentStep).data("id") === "subscription") {
+            showStep(contents.index($("[data-id='finish']")));
+        } else {
+            showStep(currentStep + 1);
+        }
     });
 
-    $(".back_btn").click(function (e) {
-        e.preventDefault();
-        if ($(this).hasClass("home_btn")) {
+    backBtn.click(function (e) {
+        if ($(this).hasClass("finish")) {
             window.location.href = "/";
         } else if (currentStep > 0) {
             showStep(currentStep - 1);
@@ -309,7 +293,12 @@ $(document).ready(function () {
 
     showStep(0);
 
-
+    $(".un_btn").click(function (e) {
+        e.preventDefault();
+        let targetId = $(this).data("target"); // Получаем data-target из кнопки
+        $(".un_content").removeClass("active"); // Скрываем все
+        $('.un_content[data-id="' + targetId + '"]').addClass("active"); // Показываем нужный блок
+    });
 
 
 

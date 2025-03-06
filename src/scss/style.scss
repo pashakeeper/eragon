@@ -235,7 +235,7 @@ input {
   background-image: url("../img/section_bg1.svg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: auto;
+  background-size: cover;
   padding-bottom: 37px;
   position: relative;
   box-sizing: border-box;
@@ -917,8 +917,8 @@ input {
   .services_cutom_row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 70px;
+    justify-content: space-between;
+    //column-gap: 70px;
 
     .services_custom_block {
       max-width: 382px;
@@ -936,6 +936,8 @@ input {
       background-position: center top;
       transition: all 0.3s ease 0s;
       cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
 
       &:hover {
         background-image: url("../img/custom_box_bg_hover.svg");
@@ -1473,7 +1475,17 @@ input {
 .faq_section {
   padding-top: 148px;
   position: relative;
-
+  .elem {
+    position: absolute;
+    &:first-child {
+      right: 0;
+    }
+    &:nth-child(2) {
+      left:0;
+      transform: scaleX(-1);
+      bottom: 0;
+    }
+  }
   .gradient {
     &::before, &::after {
       content: "";
@@ -1487,11 +1499,11 @@ input {
     }
 
     &::before {
-      left: -250px;
+      right: -250px;
     }
 
     &:after {
-      right: -250px;
+      left: -250px;
       bottom: 0;
     }
   }
@@ -1629,6 +1641,7 @@ input {
   }
 
 }
+
 .calendar_container {
   margin: auto;
   background: #101010;
@@ -1816,10 +1829,12 @@ input {
         margin-left: 56px;
         color: white;
         transition: all 0.3s ease;
+
         &.finish {
           margin-left: auto;
           margin-right: auto;
         }
+
         &:hover {
           background: #5700B1;
         }
@@ -2007,22 +2022,26 @@ input {
     color: white;
     margin-bottom: 30px;
   }
+
   h4 {
     font-size: 40px;
     font-weight: 600;
     color: white;
   }
+
   .info_tab {
     img.w-100 {
       margin-bottom: 60px;
     }
   }
+
   .signature_text {
-    font-size: clamp(18px,2vw, 40px);
+    font-size: clamp(18px, 2vw, 40px);
     color: white;
     margin-bottom: 32px;
     margin-top: auto;
   }
+
   .signature_box {
     input {
       margin-bottom: 0;
@@ -2030,6 +2049,7 @@ input {
       background: white;
       height: 73px;
     }
+
     a {
       display: flex;
       margin-bottom: 60px;
@@ -2042,42 +2062,50 @@ input {
       margin-top: 20px;
     }
   }
+
   .deposit {
-    font-size: clamp(20px,3vw,50px);
+    font-size: clamp(20px, 3vw, 50px);
     font-weight: 500;
     color: white;
     margin-bottom: 15px;
   }
+
   .deposit_amount {
     color: rgb(205, 202, 208);
     font-size: 23px;
     font-weight: 400;
     margin-bottom: 97px;
   }
+
   .select_payment_method {
     font-size: 30px;
     font-weight: 500;
     color: white;
     margin-bottom: 40px;
   }
+
   .payment_list {
     gap: 20px;
+
     a {
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all .5s ease;
       border-radius: 20px;
-      &:hover,&.active {
+
+      &:hover, &.active {
         transform: scale(.9);
         box-shadow: 0 0 25px #5700B1FF;
       }
+
       img {
         max-width: 228px;
         width: 100%;
       }
     }
   }
+
   .pay_deposit {
     border: 2px solid rgb(87, 0, 177);
     background: rgb(18, 0, 36);
@@ -2092,15 +2120,18 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    &.sub  {
+
+    &.sub {
       max-width: fit-content;
       padding-left: 20px;
       padding-right: 20px;
     }
+
     &:hover {
       background: #5700B1;
     }
   }
+
   .encounter {
     font-size: 24px;
     font-weight: 600;
@@ -2108,35 +2139,41 @@ input {
     margin-top: 279px;
     margin-bottom: 70px;
   }
-  .congrats,.other_note {
+
+  .congrats, .other_note {
     display: flex;
     align-items: center;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 86px;
     color: white;
+
     img {
       margin-right: 12px;
     }
   }
+
   .info_finish {
     font-size: 24px;
     font-weight: 400;
     color: rgb(188, 188, 188);
     margin-bottom: 16px;
   }
+
   .data_finish {
     font-size: 23px;
     font-weight: 500;
     color: white;
     margin-bottom: 101px;
   }
+
   .note {
     font-size: 24px;
     font-weight: 500;
     color: white;
     margin-bottom: 51px;
   }
+
   .contact_btn {
     max-width: 475.5px;
     width: 100%;
@@ -2148,28 +2185,46 @@ input {
     color: white;
     margin-bottom: 105px;
     transition: all .5s ease;
+
     &:first-child {
       margin-right: 89px;
     }
+
     &:hover {
       background-image: url('../img/contact-btn-hover.svg');
     }
   }
 
 }
+
 .unsubscribe {
   padding-top: 148px;
   color: white;
+
   h2 {
     color: white;
     font-size: clamp(30px, 6vw, 80px);
     font-weight: 700;
     margin-bottom: 121px;
   }
+
   .un_content {
     position: relative;
     border: 3px solid #5700B1;
-    padding: 85px 57px;
+    opacity: 0;
+    height: 0;
+    transform: rotateY(-90deg) scale(0);
+    transition: all 0.3s ease;
+
+    &.active {
+      display: block;
+      opacity: 1;
+      transform: rotateY(0deg) scale(1);
+      height: auto;
+      padding: 85px 57px;
+
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -2219,28 +2274,274 @@ input {
       }
     }
   }
+
   .un_des {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 50px;
     color: rgb(205, 202, 208);
   }
+
   h3 {
-    font-size: clamp(24px,3vw,50px);
+    font-size: clamp(24px, 3vw, 50px);
     font-weight: 600;
     margin-bottom: 80px;
   }
+
   .un_text {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 51px;
   }
+
   .note {
     display: flex;
     align-items: center;
     margin-bottom: 101px;
+
     img {
       margin-right: 20px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 24px;
+    font-weight: 500;
+    color: #CDCAD0;
+    margin-bottom: 15px;
+
+    span {
+      color: #7F7F7F;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    background: #414141;
+    margin-bottom: 60px;
+  }
+
+  textarea {
+    border: none;
+    background: #414141;
+    margin-bottom: 60px;
+    height: 137px;
+    resize: none;
+  }
+
+  .un_btn {
+    border: 2px solid rgb(87, 0, 177);
+    background: rgb(18, 0, 36);
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    transition: all .3s ease;
+    max-width: fit-content;
+    padding-left: 55px;
+    padding-right: 55px;
+    width: 100%;
+    height: 86px;
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: #5700B1;
+    }
+  }
+  .sure {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 147px;
+    text-align: center;
+    margin-top: 456px;
+  }
+  .un_content[data-id="2"] {
+    .un_btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 456px;
+    }
+  }
+  .un_done {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 103px;
+  }
+  .un_text {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 286px;
+    text-align: center;
+    a {
+      color: #1FDAFF;
+      text-decoration: underline;
+    }
+  }
+  .un_question {
+    margin-bottom: 75px;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    a {
+      color: #1FDAFF;
+      text-decoration: underline;
+    }
+  }
+  .un_content[data-id="3"] {
+   form {
+     max-width: 740px;
+     margin-left: auto;
+     margin-right: auto;
+     a {
+       margin-left: auto;
+       margin-right: auto;
+     }
+   }
+  }
+}
+
+.privacy_policy {
+  padding-top: 148px;
+  position: relative;
+  color: white;
+  .elem {
+    position: absolute;
+    &:first-child {
+      right: 0;
+    }
+
+  }
+  .gradient {
+    &::before, &::after {
+      content: "";
+      filter: blur(100.2px);
+      background: radial-gradient(50.00% 50.00% at 50% 50%, rgb(227, 19, 115) 33.6%, rgb(17, 16, 18) 100%);
+      opacity: 0.4;
+      width: 500px;
+      height: 450px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      right: -250px;
+      background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(87, 0, 177) 43.1%,rgb(17, 16, 18) 100%);
+    }
+
+    &:after {
+      left: -250px;
+      bottom: 0;
+    }
+  }
+  h1 {
+    font-size: clamp(30px, 6vw, 80px);
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-align: left;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .des {
+    color: rgb(205, 202, 208);
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 202px;
+  }
+  h2 {
+    font-size: clamp(23px,3vw,40px);
+    font-weight: 600;
+  }
+  .text_side {
+    margin-bottom: 130px;
+    line-height: 30px;
+    b {
+
+
+    }
+    .bold {
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: white;
+    }
+    .text {
+      font-weight: 500;
+      color:#CCCCCC;
+      margin-bottom: 38px;
+    }
+
+  }
+}
+.question_section {
+  position: relative;
+  padding-top: 187px;
+  color: white;
+  h2 {
+    font-size: clamp(35px,4vw,64px);
+    font-weight: 700;
+    margin-bottom: 127px;
+  }
+  .elem {
+    position: absolute;
+    &:first-child {
+      right: 0;
+    }
+    &:nth-child(2) {
+      left: 0;
+      transform: scaleX(-1);
+    }
+
+  }
+  .gradient {
+    &::before, &::after {
+      content: "";
+      filter: blur(100.2px);
+      background: radial-gradient(50.00% 50.00% at 50% 50%, rgb(87, 0, 177) 43.1%, rgb(17, 16, 18) 100%);
+      opacity: 0.4;
+      width: 500px;
+      height: 450px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      right: -250px;
+
+    }
+
+    &:after {
+      left: -250px;
+    }
+  }
+  .contact_btn {
+    max-width: 475.5px;
+    width: 100%;
+    height: 118.5px;
+    background-image: url('../img/contact-btn.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    color: white;
+    margin-bottom: 105px;
+    transition: all .5s ease;
+
+    &:first-child {
+      margin-right: 89px;
+    }
+
+    &:hover {
+      background-image: url('../img/contact-btn-hover.svg');
     }
   }
 }

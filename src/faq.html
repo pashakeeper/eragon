@@ -1,530 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eragon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="fonts/font-face.css">
-    <link rel="stylesheet" href="css/libs.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"/>
+   <link rel="stylesheet" href="fonts/font-face.css">
+   <link rel="stylesheet" href="css/libs.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-
 <!-- header -->
 <header class="header" id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-2 col-6">
-                <div class="logo">
-                    <a href="/">
-                        <img src="img/logo.svg" alt="Site logo">
-                    </a>
-                </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-2 col-6">
+            <div class="logo">
+               <a href="/">
+                  <img src="img/logo.svg" alt="Site logo">
+               </a>
             </div>
-            <div class="col-lg-7 menu_box">
-                <a href="#" class="close"><img src="img/close.svg" alt="Close"></a>
-                <ul class="nav main_menu">
-                    <li><a href="#" >Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-                <a href="#" class="subscription_mobile">Subscription</a>
-                <ul class="nav social_menu mobile_social">
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                </ul>
+         </div>
+         <div class="col-lg-7 menu_box">
+            <a href="#" class="close"><img src="img/close.svg" alt="Close"></a>
+            <ul class="nav main_menu">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Product</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Contacts</a></li>
+            </ul>
+            <a href="#" class="subscription_mobile">Subscription</a>
+            <ul class="nav social_menu mobile_social">
+               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+         </div>
+         <div class="col-lg-3 col-6 d-flex align-items-center">
+            <ul class="nav social_menu">
+               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <div class="custom-select">
+               <div class="custom-select-trigger">
+                  <span id="selected-lang">English</span>
+                  <i class="fa fa-angle-down"></i>
+               </div>
+               <div class="custom-options">
+                  <span class="custom-option selected" data-lang="en">ENG</span>
+                  <span class="custom-option" data-lang="ua">UA</span>
+               </div>
             </div>
-            <div class="col-lg-3 col-6 d-flex align-items-center">
-                <ul class="nav social_menu">
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                </ul>
-                <div class="custom-select">
-                    <div class="custom-select-trigger">
-                        <span id="selected-lang">English</span>
-                        <i class="fa fa-angle-down"></i>
-                    </div>
-                    <div class="custom-options">
-                        <span class="custom-option selected" data-lang="en">ENG</span>
-                        <span class="custom-option" data-lang="ua">UA</span>
-                    </div>
-                </div>
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div class="burger">
+               <span></span>
+               <span></span>
+               <span></span>
             </div>
-        </div>
-    </div>
-    <div id="overlay"></div>
+         </div>
+      </div>
+   </div>
+   <div id="overlay"></div>
 </header>
-
-
-
 <!--faq section-->
 <section class="faq_section" id="faq_section">
-    <span class="gradient"></span>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <h1>Frequently asked <br>questions</h1>
-                <p class="des">answers to the most common questions from our clients</p>
-                <div class="search_box">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="Search">
-                </div>
+   <img src="img/section-element-pink.svg" alt="" class="elem">
+   <img src="img/section-element-pink.svg" alt="" class="elem">
+   <span class="gradient"></span>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-9">
+            <h1>Frequently asked <br>questions</h1>
+            <p class="des">answers to the most common questions from our clients</p>
+            <div class="search_box">
+               <i class="fa fa-search"></i>
+               <input type="text" placeholder="Search">
             </div>
-            <div class="col-lg-12">
-                <div class="tabs_wrapper">
-                    <ul class="nav tabs_list">
-                        <li><a href="#" class="active">General Questions</a></li>
-                        <li><a href="#">Rental Terms</a></li>
-                        <li><a href="#">Technical Questions</a></li>
-                        <li><a href="#">Payment</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Other</a></li>
-                    </ul>
-                </div>
-
+         </div>
+         <div class="col-lg-12">
+            <div class="tabs_wrapper">
+               <ul class="nav tabs_list">
+                  <li><a href="#" class="active">General Questions</a></li>
+                  <li><a href="#">Rental Terms</a></li>
+                  <li><a href="#">Technical Questions</a></li>
+                  <li><a href="#">Payment</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Other</a></li>
+               </ul>
             </div>
-            <div class="tabs_content">
-                <div class="row flip-in active" data-id="general-questions">
-                    <div class="col-lg-5">
-                        <h2>General Questions</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">What is e-bike rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                E-bike rental is a service that allows you to use an electric bike for a specified period. You can use it for comfortable city rides, travel, leisure, or even commuting to work.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What are the benefits of renting an e-bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                - Saves time and energy thanks to the electric motor. <br>
-                                - Environmentally friendly mode of transport. <br>
-                                - Affordable without the need to purchase a bike. <br>
-                                - Includes support and maintenance services.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How long can I rent a bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You can rent a bike for a minimum of one month. The rental automatically renews monthly with an active subscription.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I extend my rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, the rental is automatically renewed every month with an active subscription.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What bikes are available for rent? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Currently, we offer Juliet II electric bikes with up to 3000W of power, a range of up to 100 km, and advanced features.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What accessories are included in the rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                1. Lock with mount ($230) <br>
-                                2. Puncture protection ($245) <br>
-                                3. Tires ($240) <br>
-                                4. Phone holder ($35) <br>
-                                5. Left-side mirror ($30) <br>
-                                6. Rear rack ($80) <br>
-                                7. Alarm system ($30) <br>
-                                8. GPS ($55) <br>
-                                9. Additional accessories upon request (if available).
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I use my own helmet or accessories? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, you can use your own accessories if they meet safety standards.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Is the bike suitable for riding in rainy weather? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, our bikes are designed for rainy conditions. We ensure the tires are in excellent condition and of premium quality for safety. However, we recommend avoiding heavy rain and exercising caution.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" data-id="rental-terms">
-                    <div class="col-lg-5">
-                        <h2>Rental Terms</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">What documents are required to rent a bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You need to provide: <br>
-                                - First Name <br>
-                                - Last Name <br>
-                                - Email <br>
-                                - Phone <br>
-                                - Address <br>
-                                At the time of pickup, a valid ID (passport or driver’s license) is required.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What details do I need to provide when booking? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You need to provide your name, email, phone number, address, and the date/time for bike pickup.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Are there any age restrictions for renting a bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, you must be 18 years or older to rent a bike.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I book a bike for someone else? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                No, the rental must be in the name of the person using the bike.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What should I do if I can't pick up the bike at the scheduled time? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Please contact us in advance via "link" to reschedule your pickup.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How is the bike returned? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You return the bike to the designated location. After an inspection, your deposit will be refunded within 7 business days if the bike is in good condition.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Are there late return fees? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, if the delay exceeds one day, an additional fee of $15 will be charged.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What is included in the rental price? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                The rental includes the bike, accessories, and free maintenance services.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I cancel my rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, you can cancel your rental up to 24 hours before the start date for a full refund. To cancel your subscription, notify us at least 3 days before the next billing cycle.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How can I modify or cancel my booking? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Contact us via "link" to make changes.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" data-id="technical-questions">
-                    <div class="col-lg-5">
-                        <h2>Technical Questions</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">How do I charge the bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Use the provided charger and connect it to a standard outlet. <br>
-                                Two options are available: <br>
-                                1. Remove the battery using the key and charge it separately. <br>
-                                2. Charge the battery directly while it’s still mounted on the bike.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How long does it take to charge the battery? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                A full charge takes 6–8 hours.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What is the bike’s range? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Approximately 90 km per charge, depending on riding style and terrain.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How can I check the remaining battery charge? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                The bike’s display shows the battery level and other useful information.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I take the bike on trips outside the city? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, but ensure you can return or handle any issues that might arise.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What should I do if the bike breaks down during the rental period? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Contact our support team. We will arrange for repairs or a replacement bike.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What are the rules for using the bike in public areas? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Follow traffic laws, use bike lanes, and avoid riding on sidewalks.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Do I need a license to ride an e-bike? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                No license is required with the default settings of our bikes, which comply with legal speed and power limits.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I use the bike in winter? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, but exercise caution on icy or slippery roads.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What safety precautions should I follow? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Always wear a helmet, follow traffic rules, and monitor the battery level.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" data-id="payment">
-                    <div class="col-lg-5">
-                        <h2>Payment</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">What payment methods do you accept? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                We accept Stripe, PayPal, Square, and Mollie.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How does the deposit system work? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                A $200 deposit is required at the time of booking. It will be refunded if the bike is returned in good condition.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">When is the first subscription payment charged? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                The first subscription payment is charged on the bike pickup date.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How can I cancel my subscription? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You can cancel it through "link" or by contacting us.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Are there any additional charges? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Additional charges apply only for damages, late returns, or bike repairs.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What if I want to extend my subscription? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                The subscription is automatically renewed. For other changes, contact us via "link."
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I get an invoice for my rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, we can provide an invoice upon request.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" data-id="support">
-                    <div class="col-lg-5">
-                        <h2>Support</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">Where do I go if the bike breaks down? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Contact our support team via phone or email.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How quickly do you respond to issues? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Minor issues are resolved immediately. Major issues are addressed within 24 hours.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Is 24/7 support available? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, our support team is available around the clock.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">What if I lose the key or lock? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Inform us via "link." A replacement will be provided for an additional fee.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">How can I contact your support team? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                You can reach us by phone, email, or through the contact form on our website.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" data-id="other">
-                    <div class="col-lg-5">
-                        <h2>Other</h2>
-                        <img class="red_line" src="img/red_line.svg" alt="Red Line">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I gift a bike rental? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, you can purchase a gift certificate.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Do you offer discounts for regular customers? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, we provide special offers for returning customers.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I rent multiple bikes at the same time? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                No, each customer can rent only one bike at a time.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Do you offer bike delivery services? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, delivery is available for an additional fee.
-                            </div>
-                        </div>
-
-                        <div class="collapse_box">
-                            <div class="collapse_header">Can I leave a review of your service? <i class="fa fa-plus"></i></div>
-                            <div class="collapse_content">
-                                Yes, we welcome your feedback on our social media pages.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         </div>
+         <div class="tabs_content">
+            <div class="row flip-in active" data-id="general-questions">
+               <div class="col-lg-5">
+                  <h2>General Questions</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">What is e-bike rental? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        E-bike rental is a service that allows you to use an electric bike for a specified period. You
+                        can use it for comfortable city rides, travel, leisure, or even commuting to work.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What are the benefits of renting an e-bike? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        - Saves time and energy thanks to the electric motor. <br>
+                        - Environmentally friendly mode of transport. <br>
+                        - Affordable without the need to purchase a bike. <br>
+                        - Includes support and maintenance services.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How long can I rent a bike? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        You can rent a bike for a minimum of one month. The rental automatically renews monthly with an
+                        active subscription.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I extend my rental? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, the rental is automatically renewed every month with an active subscription.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What bikes are available for rent? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Currently, we offer Juliet II electric bikes with up to 3000W of power, a range of up to 100 km,
+                        and advanced features.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What accessories are included in the rental? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        1. Lock with mount ($230) <br>
+                        2. Puncture protection ($245) <br>
+                        3. Tires ($240) <br>
+                        4. Phone holder ($35) <br>
+                        5. Left-side mirror ($30) <br>
+                        6. Rear rack ($80) <br>
+                        7. Alarm system ($30) <br>
+                        8. GPS ($55) <br>
+                        9. Additional accessories upon request (if available).
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I use my own helmet or accessories? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        Yes, you can use your own accessories if they meet safety standards.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Is the bike suitable for riding in rainy weather? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, our bikes are designed for rainy conditions. We ensure the tires are in excellent condition
+                        and of premium quality for safety. However, we recommend avoiding heavy rain and exercising
+                        caution.
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+            <div class="row" data-id="rental-terms">
+               <div class="col-lg-5">
+                  <h2>Rental Terms</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">What documents are required to rent a bike? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        You need to provide: <br>
+                        - First Name <br>
+                        - Last Name <br>
+                        - Email <br>
+                        - Phone <br>
+                        - Address <br>
+                        At the time of pickup, a valid ID (passport or driver’s license) is required.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What details do I need to provide when booking? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        You need to provide your name, email, phone number, address, and the date/time for bike pickup.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Are there any age restrictions for renting a bike? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, you must be 18 years or older to rent a bike.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I book a bike for someone else? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        No, the rental must be in the name of the person using the bike.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What should I do if I can't pick up the bike at the scheduled time? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Please contact us in advance via "link" to reschedule your pickup.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How is the bike returned? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        You return the bike to the designated location. After an inspection, your deposit will be
+                        refunded within 7 business days if the bike is in good condition.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Are there late return fees? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, if the delay exceeds one day, an additional fee of $15 will be charged.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What is included in the rental price? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        The rental includes the bike, accessories, and free maintenance services.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I cancel my rental? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, you can cancel your rental up to 24 hours before the start date for a full refund. To
+                        cancel your subscription, notify us at least 3 days before the next billing cycle.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How can I modify or cancel my booking? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        Contact us via "link" to make changes.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row" data-id="technical-questions">
+               <div class="col-lg-5">
+                  <h2>Technical Questions</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">How do I charge the bike? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Use the provided charger and connect it to a standard outlet. <br>
+                        Two options are available: <br>
+                        1. Remove the battery using the key and charge it separately. <br>
+                        2. Charge the battery directly while it’s still mounted on the bike.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How long does it take to charge the battery? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        A full charge takes 6–8 hours.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What is the bike’s range? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Approximately 90 km per charge, depending on riding style and terrain.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How can I check the remaining battery charge? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        The bike’s display shows the battery level and other useful information.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I take the bike on trips outside the city? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, but ensure you can return or handle any issues that might arise.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What should I do if the bike breaks down during the rental period? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Contact our support team. We will arrange for repairs or a replacement bike.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What are the rules for using the bike in public areas? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Follow traffic laws, use bike lanes, and avoid riding on sidewalks.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Do I need a license to ride an e-bike? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        No license is required with the default settings of our bikes, which comply with legal speed and
+                        power limits.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I use the bike in winter? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, but exercise caution on icy or slippery roads.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What safety precautions should I follow? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        Always wear a helmet, follow traffic rules, and monitor the battery level.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row" data-id="payment">
+               <div class="col-lg-5">
+                  <h2>Payment</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">What payment methods do you accept? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        We accept Stripe, PayPal, Square, and Mollie.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How does the deposit system work? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        A $200 deposit is required at the time of booking. It will be refunded if the bike is returned
+                        in good condition.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">When is the first subscription payment charged? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        The first subscription payment is charged on the bike pickup date.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How can I cancel my subscription? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        You can cancel it through "link" or by contacting us.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Are there any additional charges? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Additional charges apply only for damages, late returns, or bike repairs.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What if I want to extend my subscription? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        The subscription is automatically renewed. For other changes, contact us via "link."
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I get an invoice for my rental? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, we can provide an invoice upon request.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row" data-id="support">
+               <div class="col-lg-5">
+                  <h2>Support</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">Where do I go if the bike breaks down? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        Contact our support team via phone or email.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How quickly do you respond to issues? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Minor issues are resolved immediately. Major issues are addressed within 24 hours.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Is 24/7 support available? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, our support team is available around the clock.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">What if I lose the key or lock? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Inform us via "link." A replacement will be provided for an additional fee.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">How can I contact your support team? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        You can reach us by phone, email, or through the contact form on our website.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row" data-id="other">
+               <div class="col-lg-5">
+                  <h2>Other</h2>
+                  <img class="red_line" src="img/red_line.svg" alt="Red Line">
+               </div>
+               <div class="col-lg-7">
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I gift a bike rental? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, you can purchase a gift certificate.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Do you offer discounts for regular customers? <i
+                       class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, we provide special offers for returning customers.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I rent multiple bikes at the same time? <i class="fa fa-plus"></i>
+                     </div>
+                     <div class="collapse_content">
+                        No, each customer can rent only one bike at a time.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Do you offer bike delivery services? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, delivery is available for an additional fee.
+                     </div>
+                  </div>
+                  <div class="collapse_box">
+                     <div class="collapse_header">Can I leave a review of your service? <i class="fa fa-plus"></i></div>
+                     <div class="collapse_content">
+                        Yes, we welcome your feedback on our social media pages.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
-
 <!-- footer -->
 <footer class="footer" id="footer">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4">
-                <img src="img/footer_line.svg" alt="" class="footer_line mobile_footer_line">
-                <ul class="footer_list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us </a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contacts</a></li>
-                    <li><a href="#">SUBSCRIBTIONS</a></li>
-                </ul>
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-lg-4">
+            <img src="img/footer_line.svg" alt="" class="footer_line mobile_footer_line">
+            <ul class="footer_list">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About Us </a></li>
+               <li><a href="#">Product</a></li>
+               <li><a href="#">Services</a></li>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">Contacts</a></li>
+               <li><a href="#">SUBSCRIBTIONS</a></li>
+            </ul>
+         </div>
+         <div class="col-lg-4">
+            <div class="footer_logo">
+               <a href="#">
+                  <img src="img/footer_logo.svg" alt="">
+               </a>
             </div>
-            <div class="col-lg-4">
-                <div class="footer_logo">
-                    <a href="#">
-                        <img src="img/footer_logo.svg" alt="">
-                    </a>
-                </div>
-                <p class="partner">Your partner for flawless rides</p>
-            </div>
-            <div class="col-lg-4">
-                <a href="#" class="privacy">Privacy Policy</a>
-                <p class="copyright">
-                    © 2024 Eragon. <br><br>
-                    All rights reserved
-                </p>
-            </div>
-            <div class="col-lg-12">
-                <img src="img/footer_line.svg" alt="" class="footer_line">
-                <ul class="nav footer_social_list">
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                </ul>
-                <p class="follow">Follow us on social media</p>
-            </div>
-        </div>
-    </div>
+            <p class="partner">Your partner for flawless rides</p>
+         </div>
+         <div class="col-lg-4">
+            <a href="#" class="privacy">Privacy Policy</a>
+            <p class="copyright">
+               © 2024 Eragon. <br><br>
+               All rights reserved
+            </p>
+         </div>
+         <div class="col-lg-12">
+            <img src="img/footer_line.svg" alt="" class="footer_line">
+            <ul class="nav footer_social_list">
+               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+               <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+               <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <p class="follow">Follow us on social media</p>
+         </div>
+      </div>
+   </div>
 </footer>
 <a href="#" class="up"><img src="img/up.svg" alt=""></a>
 <script defer src="js/jquery.min.js"></script>
@@ -533,5 +523,4 @@
 <script defer src="js/slick.min.js"></script>
 <script defer src="js/scripts.js"></script>
 </body>
-
 </html>
