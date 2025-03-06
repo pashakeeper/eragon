@@ -128,7 +128,7 @@ $(document).ready(function () {
     const today = new Date();
     let currentMonth = today.getMonth();
     let currentYear = today.getFullYear();
-    let currentDayIndex = 0;
+    let currentDayIndex = today.getDate() - ((today.getDay() || 7) - 1); // Начало текущей недели (понедельник)
 
     function updateCalendar() {
         const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -138,48 +138,62 @@ $(document).ready(function () {
         generateWeekView();
     }
 
+// Генерация недельного вида с днями недели (начало с Понедельника)
     function generateWeekView() {
         $("#weekView").empty();
-        let firstDay = new Date(currentYear, currentMonth, 1).getDay();
+        let weekDays = ["M", "T", "W", "T", "F", "S", "S"];
+        let firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() || 7) - 1; // Приводим воскресенье (0) к 7
         let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
 
         for (let i = 0; i < 7; i++) {
-            let dateNum = currentDayIndex + i + 1;
-            if (dateNum > lastDate) dateNum -= lastDate;
+            let dateNum = currentDayIndex + i;
+
+            // Если дата выходит за границы месяца - пересчет
+            if (dateNum < 1) {
+                let prevMonthLastDate = new Date(currentYear, currentMonth, 0).getDate();
+                dateNum = prevMonthLastDate + dateNum;
+            } else if (dateNum > lastDate) {
+                dateNum -= lastDate;
+            }
 
             let isToday = (dateNum === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear());
-            let dateDiv = $(`<div class="date ${isToday ? "today" : ""}" data-date="${dateNum}">${dateNum}</div>`);
+
+            let dateDiv = $(`
+            <div class="date ${isToday ? "today" : ""}" data-date="${dateNum}">
+                <div class="day-name">${weekDays[i]}</div>
+                <div class="day-number">${dateNum}</div>
+            </div>
+        `);
+
             dateDiv.on("click", function () {
-                $(".date").removeClass("selected");
-                $(this).addClass("selected");
+                $(".date .day-number").removeClass("selected"); // Удаляем класс только с чисел
+                $(this).find(".day-number").addClass("selected");
+                loadTimeSlots(); // Обновляем время при смене дня
             });
+
             $("#weekView").append(dateDiv);
         }
     }
 
+// Генерация 24 временных слотов (00:00 - 23:00)
     function loadTimeSlots() {
-        let times = [
-            "04:00", "05:00", "06:00", "07:00", "08:00",
-            "09:00", "10:00", "11:00", "12:00", "13:00",
-            "14:00", "15:00", "16:00", "17:00", "18:00",
-            "19:00", "20:00", "21:00", "22:00", "23:00"
-        ];
+        $("#timePicker").empty();
+        for (let hour = 0; hour < 24; hour++) {
+            let time = `${hour.toString().padStart(2, '0')}:00`;
 
-        times.forEach(time => {
             let timeSlot = $("<div>")
                 .addClass("time_slot")
-                .text(time);
-
-            timeSlot.on("click", function () {
-                $(".time_slot").removeClass("active");
-                $(this).addClass("active");
-            });
+                .text(time)
+                .on("click", function () {
+                    $(".time_slot").removeClass("active");
+                    $(this).addClass("active");
+                });
 
             $("#timePicker").append(timeSlot);
-        });
+        }
     }
-    loadTimeSlots();
 
+// Навигация по месяцам
     $("#prevMonth").click(function () {
         if (currentMonth === 0) {
             currentMonth = 11;
@@ -187,6 +201,7 @@ $(document).ready(function () {
         } else {
             currentMonth--;
         }
+        currentDayIndex = 1; // Начинаем с 1-го числа месяца
         updateCalendar();
     });
 
@@ -197,27 +212,105 @@ $(document).ready(function () {
         } else {
             currentMonth++;
         }
+        currentDayIndex = 1; // Начинаем с 1-го числа месяца
         updateCalendar();
     });
 
+// Навигация по неделям
     $("#prevWeek").click(function () {
-        if (currentDayIndex > 0) {
-            currentDayIndex -= 7;
-        } else {
-            currentDayIndex = 0;
+        currentDayIndex -= 7;
+        let firstDayOfMonth = (new Date(currentYear, currentMonth, 1).getDay() || 7) - 1;
+        if (currentDayIndex < -firstDayOfMonth) {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            let lastDatePrevMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+            currentDayIndex = lastDatePrevMonth - 7 + firstDayOfMonth;
         }
-        generateWeekView();
+        updateCalendar();
     });
 
     $("#nextWeek").click(function () {
         let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
-        if (currentDayIndex + 7 < lastDate) {
+        if (currentDayIndex + 7 > lastDate) {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            currentDayIndex = 1;
+        } else {
             currentDayIndex += 7;
         }
-        generateWeekView();
+        updateCalendar();
     });
 
     updateCalendar();
+    loadTimeSlots();
+    let currentStep = 0;
+
+    const steps = $(".tabs_list li");
+    const contents = $(".tabs_content > .row");
+
+    function showStep(index) {
+        steps.removeClass("active").eq(index).addClass("active");
+        contents.removeClass("active").eq(index).addClass("active");
+        currentStep = index;
+
+        // Если активен "Subscription", сразу перекидываем на "Finish"
+        if ($(".info_tab[data-id='subscription']").hasClass("active")) {
+            showStep(contents.index($(".info_tab[data-id='finish']")));
+        }
+
+        // Изменение кнопки "Назад" на "Домой" на последнем шаге
+        if ($(".info_tab[data-id='finish']").hasClass("active")) {
+            $(".back_btn").text("Home").addClass("home_btn");
+        } else {
+            $(".back_btn").text("Previous").removeClass("home_btn");
+        }
+        if ($(".confirm_tab[data-id='confirmation']").hasClass("active")) {
+            $('.loading-spinner').fadeIn();
+            $('.proceed-btn').removeClass('active').prop('disabled', true);
+
+            setTimeout(function () {
+                $('.loading-spinner').fadeOut();
+                $('.proceed-btn').addClass('active').prop('disabled', false);
+            }, 2000);
+        }
+    }
+    $('.proceed-btn').click(function (e){
+        $(".tabs_content > .row").removeClass("active");
+        $('.info_tab[data-id="documents"]').addClass('active');
+        $('.tabs_list li a').removeClass('active');
+        $('.tabs_list li:nth-child(2) a').addClass('active');
+    });
+
+    $(".tabs_list li a").click(function (e) {
+        e.preventDefault();
+        const index = $(this).parent().index();
+        showStep(index);
+    });
+
+    $(".purple_btn").click(function (e) {
+        e.preventDefault();
+        showStep(currentStep + 1);
+    });
+
+    $(".back_btn").click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass("home_btn")) {
+            window.location.href = "/";
+        } else if (currentStep > 0) {
+            showStep(currentStep - 1);
+        }
+    });
+
+    showStep(0);
+
+
+
 
 
 });

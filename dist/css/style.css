@@ -1380,6 +1380,123 @@ input {
   transition: transform 0.3s ease;
 }
 
+.calendar_container {
+  margin: auto;
+  background: #101010;
+  border-radius: 10px;
+  border: 3px solid #5700B1;
+  margin-bottom: 68px;
+}
+
+.calendar_header_container {
+  background: #5700B1;
+  padding: 31px 44px;
+}
+
+.calendar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendar_header button, .calendar_days button {
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#currentMonth {
+  font-size: clamp(18px, 2vw, 40px);
+  color: white;
+}
+
+.calendar_days {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.week_scroll {
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.week_scroll .date {
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date.today .day-number {
+  background: white;
+  color: #5700b1;
+}
+
+.time_grid {
+  padding: 43px 43px 53px;
+  gap: 20px;
+}
+
+.date .day-number.selected {
+  background: white;
+  color: #5700B1;
+}
+
+.date .day-number {
+  width: 43px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.date .day-name {
+  margin-top: 40px;
+}
+
+#timePicker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.time_slot {
+  width: 22%;
+  height: 54px;
+  border: 2px solid #5700b1;
+  border-radius: 26px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+}
+
+.time_slot.active {
+  background: #5700b1;
+}
+
 .rental_section {
   padding-top: 148px;
 }
@@ -1390,11 +1507,98 @@ input {
   margin-bottom: 121px;
 }
 .rental_section .rental_content {
-  padding-bottom: 50px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   position: relative;
   border: 3px solid #5700B1;
+}
+.rental_section .rental_content .tabs_content .row {
+  opacity: 0;
+  height: 0;
+  transform: rotateY(-90deg) scale(0);
+  transition: all 0.3s ease;
+}
+.rental_section .rental_content .tabs_content .row.active {
+  display: flex;
+  opacity: 1;
+  transform: rotateY(0deg) scale(1);
+  height: auto;
+}
+.rental_section .rental_content .rental_btns {
+  display: flex;
+  align-items: center;
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  padding-top: 31px;
+  border-top: 3px solid #5700b1;
+}
+.rental_section .rental_content .rental_btns .purple_btn {
+  margin-left: auto;
+  margin-right: 73px;
+  margin-top: 0;
+}
+.rental_section .rental_content .rental_btns .purple_btn img {
+  margin-right: -30px;
+  margin-left: 80px;
+}
+.rental_section .rental_content .rental_btns .back_btn {
+  background: #120024;
+  font-size: clamp(14px, 2vw, 35px);
+  font-weight: 600;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(87, 0, 177);
+  max-width: 310px;
+  width: 100%;
+  margin-left: 56px;
+  color: white;
+  transition: all 0.3s ease;
+}
+.rental_section .rental_content .rental_btns .back_btn.finish {
+  margin-left: auto;
+  margin-right: auto;
+}
+.rental_section .rental_content .rental_btns .back_btn:hover {
+  background: #5700B1;
+}
+.rental_section .rental_content .loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(87, 0, 117, 0.2);
+  border-top: 4px solid #5700B1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+  margin: 20px auto;
+}
+.rental_section .rental_content .confirmation-message h3 {
+  margin-bottom: 40px;
+}
+.rental_section .rental_content .proceed-btn {
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rental_section .rental_content .proceed-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rental_section .rental_content .confirmation-message {
+  font-size: 20px;
+  color: white;
 }
 .rental_section .rental_content::before {
   content: "";
@@ -1406,16 +1610,37 @@ input {
   right: -10px;
   top: 22px;
 }
+.rental_section .rental_content::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #5700b1;
+  transform: rotate(45deg);
+  width: 70px;
+  height: 2px;
+  left: -10px;
+  bottom: 22px;
+}
 .rental_section .rental_content .shape::before {
   content: "";
   position: absolute;
   background-color: #101010;
-  right: -10px;
-  top: 22px;
+  right: -4px;
+  top: -3px;
   width: 50px;
   height: 50px;
   background-image: url("../img/shape.svg");
-  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 100%);
+}
+.rental_section .rental_content .shape:after {
+  content: "";
+  position: absolute;
+  background-color: #101010;
+  left: -3px;
+  bottom: -3px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/shape-reverse.svg");
+  clip-path: polygon(0% 0%, 10% 0%, 100% 100%, 0% 100%);
 }
 .rental_section .tabs_list {
   margin-bottom: -3px;
@@ -1459,7 +1684,7 @@ input {
   color: white;
   margin-bottom: 81px;
 }
-.rental_section .tabs_content .row {
+.rental_section .tabs_content .row.active {
   padding-top: 86px;
 }
 .rental_section .tabs_content label {
@@ -1476,73 +1701,239 @@ input {
   border: none;
   width: 100%;
 }
-.rental_section .calendar_container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  background: #1E1E1E;
-  border-radius: 10px;
+.rental_section .form_side .col-sm-6, .rental_section .form_side .col-sm-12 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.rental_section .calendar_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.rental_section .calendar_header button, .rental_section .calendar_days button {
-  background: #6A0DAD;
+.rental_section .des {
+  font-size: 24px;
+  font-weight: 500;
   color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 18px;
+  margin-bottom: 30px;
 }
-.rental_section .calendar_days {
+.rental_section h4 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+.rental_section .info_tab img.w-100 {
+  margin-bottom: 60px;
+}
+.rental_section .signature_text {
+  font-size: clamp(18px, 2vw, 40px);
+  color: white;
+  margin-bottom: 32px;
+  margin-top: auto;
+}
+.rental_section .signature_box input {
+  margin-bottom: 0;
+  border-radius: 16px;
+  background: white;
+  height: 73px;
+}
+.rental_section .signature_box a {
+  display: flex;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 23px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+.rental_section .deposit {
+  font-size: clamp(20px, 3vw, 50px);
+  font-weight: 500;
+  color: white;
+  margin-bottom: 15px;
+}
+.rental_section .deposit_amount {
+  color: rgb(205, 202, 208);
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 97px;
+}
+.rental_section .select_payment_method {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 40px;
+}
+.rental_section .payment_list {
+  gap: 20px;
+}
+.rental_section .payment_list a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  justify-content: center;
+  transition: all 0.5s ease;
+  border-radius: 20px;
 }
-.rental_section .week_scroll {
-  display: flex;
-  gap: 5px;
-  overflow: hidden;
+.rental_section .payment_list a:hover, .rental_section .payment_list a.active {
+  transform: scale(0.9);
+  box-shadow: 0 0 25px #5700b1;
+}
+.rental_section .payment_list a img {
+  max-width: 228px;
   width: 100%;
 }
-.rental_section .week_scroll .date {
-  flex: 1;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 6px;
-  background: #333;
-  transition: 0.3s;
+.rental_section .pay_deposit {
+  border: 2px solid rgb(87, 0, 177);
+  background: rgb(18, 0, 36);
+  font-size: 35px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  max-width: 316px;
+  width: 100%;
+  height: 86px;
+  margin-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.rental_section .date.today {
-  background: #6A0DAD;
+.rental_section .pay_deposit.sub {
+  max-width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.rental_section .date.selected {
-  background: #A329FF;
+.rental_section .pay_deposit:hover {
+  background: #5700B1;
+}
+.rental_section .encounter {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin-top: 279px;
+  margin-bottom: 70px;
+}
+.rental_section .congrats, .rental_section .other_note {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 86px;
   color: white;
 }
-.rental_section #timePicker {
+.rental_section .congrats img, .rental_section .other_note img {
+  margin-right: 12px;
+}
+.rental_section .info_finish {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(188, 188, 188);
+  margin-bottom: 16px;
+}
+.rental_section .data_finish {
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 101px;
+}
+.rental_section .note {
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 51px;
+}
+.rental_section .contact_btn {
+  max-width: 475.5px;
+  width: 100%;
+  height: 118.5px;
+  background-image: url("../img/contact-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  color: white;
+  margin-bottom: 105px;
+  transition: all 0.5s ease;
+}
+.rental_section .contact_btn:first-child {
+  margin-right: 89px;
+}
+.rental_section .contact_btn:hover {
+  background-image: url("../img/contact-btn-hover.svg");
+}
+
+.unsubscribe {
+  padding-top: 148px;
+  color: white;
+}
+.unsubscribe h2 {
+  color: white;
+  font-size: clamp(30px, 6vw, 80px);
+  font-weight: 700;
+  margin-bottom: 121px;
+}
+.unsubscribe .un_content {
+  position: relative;
+  border: 3px solid #5700B1;
+  padding: 85px 57px;
+}
+.unsubscribe .un_content::before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #5700b1;
+  transform: rotate(45deg);
+  width: 70px;
+  height: 2px;
+  right: -10px;
+  top: 22px;
+}
+.unsubscribe .un_content::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #5700b1;
+  transform: rotate(45deg);
+  width: 70px;
+  height: 2px;
+  left: -10px;
+  bottom: 22px;
+}
+.unsubscribe .un_content .shape::before {
+  content: "";
+  position: absolute;
+  background-color: #101010;
+  right: -4px;
+  top: -3px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/shape.svg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 100%);
+}
+.unsubscribe .un_content .shape:after {
+  content: "";
+  position: absolute;
+  background-color: #101010;
+  left: -3px;
+  bottom: -3px;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/shape-reverse.svg");
+  clip-path: polygon(0% 0%, 10% 0%, 100% 100%, 0% 100%);
+}
+.unsubscribe .un_des {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  color: rgb(205, 202, 208);
+}
+.unsubscribe h3 {
+  font-size: clamp(24px, 3vw, 50px);
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+.unsubscribe .un_text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 51px;
+}
+.unsubscribe .note {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  margin-bottom: 101px;
 }
-.rental_section .time_slot {
-  width: 22%;
-  margin: 5px;
-  padding: 10px;
-  border: 1px solid #A329FF;
-  border-radius: 6px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.rental_section .time_slot.active {
-  background: #A329FF;
-  color: black;
+.unsubscribe .note img {
+  margin-right: 20px;
 }

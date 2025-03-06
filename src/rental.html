@@ -86,68 +86,171 @@
             <div class="shape"></div>
             <div class="tabs_content">
                <div class="row active info_tab justify-content-between" data-id="info">
-                  <div class="col-lg-5 d-flex flex-wrap">
-                     <div class="col-lg-12">
+                  <div class="col-lg-6 d-flex flex-wrap form_side">
+                     <div class="col-sm-12">
                         <h3>Information about you</h3>
                         <label>First and Last Name</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>Email</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>Phone</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-12">
+                     <div class="col-sm-12">
                         <h3>Address</h3>
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>Country</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>Province</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>City</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-6">
+                     <div class="col-sm-6">
                         <label>Postal Code</label>
                         <input type="text">
                      </div>
-                     <div class="col-lg-12">
+                     <div class="col-sm-12">
                         <label>Street</label>
                         <input type="text">
                      </div>
                   </div>
-                  <div class="col-lg-5">
+                  <div class="col-lg-6">
                      <h3>Choose a date and time to pick up your bike</h3>
                      <div class="calendar_container">
-                        <!-- Навигация по месяцам -->
-                        <div class="calendar_header">
-                           <button id="prevMonth"><i class="fa fa-angle-left"></i></button>
-                           <span id="currentMonth"></span>
-                           <button id="nextMonth"><i class="fa fa-angle-right"></i></button>
+                        <div class="calendar_header_container">
+                           <div class="calendar_header">
+                              <button id="prevMonth"><i class="fa fa-angle-left"></i></button>
+                              <span id="currentMonth"></span>
+                              <button id="nextMonth"><i class="fa fa-angle-right"></i></button>
+                           </div>
+                           <!-- Дни недели (отображает только 7 дней) -->
+                           <div class="calendar_days">
+                              <button id="prevWeek"><i class="fa fa-angle-left"></i></button>
+                              <div id="weekView" class="week_scroll"></div>
+                              <button id="nextWeek"><i class="fa fa-angle-right"></i></button>
+                           </div>
                         </div>
-
-                        <!-- Дни недели (отображает только 7 дней) -->
-                        <div class="calendar_days">
-                           <button id="prevWeek"><i class="fa fa-angle-left"></i></button>
-                           <div id="weekView" class="week_scroll"></div>
-                           <button id="nextWeek"><i class="fa fa-angle-right"></i></button>
-                        </div>
-
                         <!-- Выбор времени -->
                         <div id="timePicker" class="time_grid"></div>
                      </div>
-
-
                   </div>
                </div>
+               <div class="row confirm_tab" data-id="confirmation">
+                  <div class="col-lg-12 text-center">
+                     <div class="confirmation-message">
+                        <h3>Your information has been accepted.</h3>
+                        <p>The next step is signing the documents.</p>
+                        <p>You will need to review and sign two documents: <strong>the Rental Agreement</strong> and
+                           <strong>the Liability Agreement</strong>.</p>
+                        <div class="loading-spinner"></div>
+                        <a href="#" class="btn main_btn proceed-btn">Proceed to Documents <img src="img/arrow-white.svg"
+                                                                                               alt=""></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="row info_tab justify-content-between" data-id="documents">
+                  <div class="col-lg-12">
+                     <p class="des">Your information has been accepted. The next step is signing the documents. You will
+                        need to review and sign two documents: the Rental Agreement and the Liability Agreement.</p>
+                     <h3>Signing of documents</h3>
+                     <h4>Rental Agreement</h4>
+                  </div>
+                  <div class="col-lg-7">
+                     <img class="w-100" src="img/document.svg" alt="">
+                  </div>
+                  <div class="col-lg-5 d-flex signature_box flex-column">
+                     <p class="signature_text">Signature area</p>
+                     <input type="text">
+                     <a href="#">Next document</a>
+                  </div>
+               </div>
+               <div class="row info_tab justify-content-between" data-id="deposit">
+                  <div class="col-lg-12">
+                     <h3>Payment of deposit</h3>
+                     <div class="deposit">$200</div>
+                     <div class="deposit_amount">Deposit amount</div>
+                     <div class="select_payment_method">Selecting a payment method</div>
+                     <ul class="nav payment_list">
+                        <li><a href="#"><img src="img/pay1.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay2.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay3.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay4.svg" alt=""></a></li>
+                     </ul>
+                     <a href="#" class="pay_deposit">Pay Deposit</a>
+                     <p class="encounter">If you encounter any issues, please contact us using the</p>
+                  </div>
+               </div>
+               <div class="row info_tab justify-content-between" data-id="subscription">
+                  <div class="col-lg-12">
+                     <div class="des">Thank you! Your deposit has been successfully processed</div>
+                     <h3>Monthly Subscription</h3>
+                     <div class="des">1. Deposit Payment: You need to pay a deposit of $200 CAD. This deposit secures
+                        your bike reservation and covers any potential damages. The deposit will be fully refunded if
+                        the bike is returned in good condition.
+                        <br><br>2. Monthly Subscription: After the deposit, you will set up a monthly subscription of
+                        $300 CAD, which can be canceled at any time. The subscription guarantees continuous access to
+                        your rental bike and maintenance services.
+                     </div>
+                     <div class="deposit">$300</div>
+                     <div class="deposit_amount">Subscription amoun</div>
+                     <div class="select_payment_method">Selecting a payment method</div>
+                     <ul class="nav payment_list">
+                        <li><a href="#"><img src="img/pay1.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay2.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay3.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pay4.svg" alt=""></a></li>
+                     </ul>
+                     <a href="#" class="pay_deposit sub">Activate Subscription</a>
+                     <p class="encounter">If you encounter any issues, please contact us using the</p>
+                  </div>
+               </div>
+               <div class="row info_tab justify-content-between" data-id="finish">
+                  <div class="col-lg-12">
+                     <div class="congrats"><img src="img/ok.svg" alt="">Congratulations! Your rental has been
+                        successfully completed.
+                     </div>
+                     <h3>Summary information</h3>
+                     <div class="d-flex flex-wrap">
+                        <div class="col-sm-4">
+                           <p class="info_finish">Client Number</p>
+                           <div class="data_finish">#5487-58</div>
+                        </div>
+                        <div class="col-sm-4">
+                           <p class="info_finish">Bike Pickup Date</p>
+                           <div class="data_finish">16.01.2025</div>
+                        </div>
+                        <div class="col-sm-4">
+                           <p class="info_finish">Pickup Address</p>
+                           <div class="data_finish">1360 Hornby st.</div>
+                        </div>
+                     </div>
+                     <div class="note">Important Note: Please bring a valid ID (passport or driver’s license) to pick up
+                        your bike. The bike will not be issued without proper identification.
+                     </div>
+                     <div class="other_note"><img src="img/atention.svg" alt="">Be On Time: Make sure to arrive at the
+                        scheduled time to ensure a smooth pickup process. 
+                     </div>
+                     <h3>Contact information:</h3>
+                     <div class="d-flex flex-wrap">
+                     <a href="#" class="btn contact_btn">eragon.bike@gmail.com</a>
+                     <a href="#" class="btn contact_btn"> +1 (236) 865 2913   </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="rental_btns">
+               <a href="#" class="back_btn">Previous</a>
+               <a href="#" class="btn purple_btn">Next <img src="img/arrow-white.svg" alt=""></a>
             </div>
          </div>
       </div>
