@@ -27,16 +27,8 @@
   .data_list {
     margin-top: 50px;
   }
-  .container {
-    max-width: 90%;
-  }
   body {
-    .main_btn, .purple_btn, .red_btn {
-      max-width: 250px;
-      font-size: large;
-      z-index: 2;
-      height: 100px;
-    }
+
 
   }
   .section_02 .buttons_list li a {
@@ -47,9 +39,6 @@
   }
   .footer .footer_list, .footer .copyright, .footer .privacy, .footer .partner, .footer .follow {
     font-size: 20px;
-  }
-  .description p {
-    font-size: 1.2vw;
   }
   .up {
     width: 80px;

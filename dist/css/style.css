@@ -256,28 +256,42 @@ input {
   clip-path: polygon(100% 100%, 100% 0%, 0% 100%);
 }
 .section_01 h1 {
-  font-size: clamp(34px, 5vw, 108px);
   text-transform: uppercase;
   font-family: "Nulshock";
-  letter-spacing: -3px;
-  margin-top: 50px;
+  margin-top: 15vh;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+  line-height: 1.1;
+}
+.section_01 h1 span {
+  display: inline-block;
 }
 .section_01 h1 .blue {
   color: #1fdaff;
+  font-size: 108px;
+}
+.section_01 h1 .blue:last-child {
+  font-size: 82px;
 }
 .section_01 h1 .stroke {
   color: black;
-  -webkit-text-stroke: 2px #fff;
+  font-size: 100px;
+  padding-left: 13px;
   text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff, 0px 0px 6.8px rgb(255, 255, 255), 0px 0px 12px rgba(255, 255, 255, 0.8);
+}
+.section_01 h1 .stroke:nth-child(4) {
+  font-size: 82px;
+  padding: 0 20px;
 }
 .section_01 h1 .white {
   color: white;
+  font-size: 82px;
 }
 .section_01 .line {
   height: 39px;
-}
-.section_01 .line img {
-  width: 100%;
 }
 .section_01 .main_btn {
   margin-left: auto;
@@ -320,11 +334,10 @@ input {
 }
 .description p {
   color: #cdcad0;
-  font-size: clamp(18px, 1.5vw, 23px);
+  font-size: 23px;
   font-weight: 500;
-  line-height: normal;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  line-height: 38px;
 }
 
 .btn {
@@ -384,6 +397,7 @@ input {
 .data_list span {
   font-size: 22px;
   font-weight: 500;
+  line-height: 28px;
 }
 
 .more {
