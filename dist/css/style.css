@@ -323,7 +323,6 @@ input {
   font-size: clamp(18px, 1.5vw, 23px);
   font-weight: 500;
   line-height: normal;
-  text-align: justify;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -375,9 +374,6 @@ input {
   column-gap: 55px;
   color: white;
   margin-top: 100px;
-}
-.data_list li {
-  max-width: 153px;
 }
 .data_list p {
   font-size: 36px;
