@@ -115,14 +115,15 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
     if ($(window).width() < 991) {
-        $('.tabs_list').slick({
+        $('.faq_section .tabs_list').slick({
             slidesToShow: 1, // Количество видимых элементов
             slidesToScroll: 1,
             infinite: false,
             variableWidth: true, // Автоматическая ширина
             arrows: true,
-            prevArrow: '<button class="scroll-btn scroll-left">←</button>',
-            nextArrow: '<button class="scroll-btn scroll-right">→</button>',
+            draggable: true, // Включает возможность перетаскивания
+            swipe: true, // Разрешает свайпы на тач-устройствах
+            touchMove: true,
         });
     }
     const today = new Date();
@@ -262,7 +263,7 @@ $(document).ready(function () {
 
         if (contents.eq(index).data("id") === "finish") {
             nextBtn.hide();
-            backBtn.text("Home").addClass("finish").attr("href", "/");
+            backBtn.text("Back to main page").addClass("finish").attr("href", "/");
         } else {
             nextBtn.show();
             backBtn.text("Previous").removeClass("finish").removeAttr("href");

@@ -337,9 +337,6 @@
   .faq_section .tabs_list .slick-slide {
     margin-right: 15px;
   }
-  .container {
-    max-width: 95%;
-  }
   .bike_box {
     right: -33px;
   }
@@ -689,5 +686,294 @@
     left: unset;
     transform: none;
     top: 500px;
+  }
+  .faq_section .elem:first-child {
+    height: 104px;
+    top: 300px;
+  }
+  .faq_section .des {
+    font-size: 17px;
+  }
+  .faq_section .collapse_header {
+    font-size: 15px;
+  }
+  .faq_section .collapse_content {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+  }
+  .faq_section .elem:nth-child(2) {
+    height: 104px;
+    bottom: 100px;
+  }
+  .faq_section .collapse_header i {
+    min-width: 25px;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+  .rental_section .tabs_list a span {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 0;
+  }
+  .rental_section .tabs_list a {
+    height: 30px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .rental_section .tabs_list li:first-child a {
+    padding-left: 14px;
+    padding-right: 50px;
+  }
+  .rental_section .rental_content .tabs_content .row.active {
+    padding-top: 30px;
+  }
+  .form_side {
+    padding: 0;
+  }
+  .rental_section .form_side .col-sm-6, .rental_section .form_side .col-sm-12 {
+    padding: 0;
+    width: 100%;
+  }
+  .rental_section h3 {
+    margin-bottom: 30px;
+  }
+  .rental_section .tabs_content label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .rental_section .tabs_content input {
+    margin-bottom: 20px;
+  }
+  .calendar_header_container {
+    padding: 14px 20px;
+  }
+  .date .day-name {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .date .day-number {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    margin-top: 13px;
+  }
+  .time_grid {
+    padding: 20px;
+    gap: 12px;
+  }
+  .time_slot {
+    height: 24px;
+    font-size: 13px;
+  }
+  .rental_section .rental_content .rental_btns .back_btn {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .rental_section .rental_content .rental_btns .purple_btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rental_section .des {
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 28px;
+  }
+  .rental_section h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .rental_section h4 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+  .rental_section .signature_text {
+    text-align: center;
+  }
+  .rental_section .rental_content {
+    margin-bottom: 50px;
+  }
+  .rental_section .rental_content .rental_btns .purple_btn img {
+    margin-left: 50px;
+  }
+  .footer .footer_list, .footer .copyright, .footer .privacy, .footer .partner, .footer .follow {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #BEBEBE;
+  }
+  .footer .row .footer_line {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+  .footer .footer_list {
+    margin-top: 0;
+  }
+  .rental_section .deposit_amount {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 30px;
+  }
+  .rental_section .select_payment_method {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 21px;
+  }
+  .rental_section .payment_list li {
+    max-width: 45%;
+  }
+  .rental_section .pay_deposit {
+    max-width: 100%;
+    margin-top: 26px;
+  }
+  .rental_section .encounter {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: underline;
+  }
+  .rental_section .congrats, .rental_section .other_note {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 30px;
+  }
+  .rental_section .col-sm-4 {
+    width: 100%;
+  }
+  .rental_section .data_finish {
+    margin-bottom: 20px;
+  }
+  .rental_section .note {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    margin-bottom: 30px;
+  }
+  .rental_section .contact_btn {
+    height: 72px;
+    max-width: 333px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .rental_section .contact_btn:first-child {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .unsubscribe .un_content.active {
+    padding: 30px;
+  }
+  .unsubscribe .un_des {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  .unsubscribe h3 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .unsubscribe .un_text {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 17px;
+    margin-bottom: 40px;
+  }
+  .unsubscribe .note {
+    margin-bottom: 40px;
+  }
+  .unsubscribe label {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .unsubscribe .un_btn {
+    max-width: 333px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    height: 48px;
+    margin-top: 34px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .unsubscribe textarea {
+    margin-bottom: 0;
+  }
+  .unsubscribe .sure {
+    margin-top: 174px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 97px;
+  }
+  .unsubscribe .un_content[data-id="2"] .un_btn {
+    margin-bottom: 247px;
+  }
+  .unsubscribe .un_done {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+  .unsubscribe .un_content[data-id="3"] .un_text {
+    text-align: center;
+    margin-bottom: 87px;
+  }
+  .unsubscribe .un_question {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 34px;
+  }
+  .privacy_policy .des {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 95px;
+  }
+  .privacy_policy .text_side {
+    margin-bottom: 67px;
+  }
+  .question_section {
+    padding-top: 60px;
+  }
+  .question_section .contact_btn {
+    display: none;
+  }
+  .question_section .contact_btn:first-child {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    display: flex;
+  }
+  .rental_section {
+    padding-top: 60px;
+  }
+  .question_section h2 {
+    margin-bottom: 27px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+  .privacy_policy .elem, .question_section .elem {
+    height: 100px;
   }
 }
